@@ -5,8 +5,6 @@
 .tests_card{
     border-radius: 24px;
     background: white;
-    /* max-height: 480px; */
-    /* height: 100%; */
 }
 
 .tests_card_top{
@@ -20,11 +18,11 @@
 
 .tests_csrd_top_text{
     font-family: Montserrat;
-        font-size: 24px;
-        font-weight: 400;
-        line-height: 36px;
-        text-align: left;
-        color: white;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 36px;
+    text-align: left;
+    color: white;
 }
 
 .tests_card_top_num{
@@ -38,20 +36,16 @@
 
 
 .tests_card_bottom{
-    position: relative;
     background: white;
     padding: 46px 60px;
     border-radius: 0 0 24px 24px;
-    height: 600px;
     width: 100%;
 }
 
 .tests_card_bottom_btns{
-    position: absolute;
-    bottom: 60px;
-    width: 100%;
+    padding-top: 50px;
+    display: flex;
     justify-content: space-between;
-    align-items: center;
 }
 
 .tests_card_bottom_btn1, .tests_card_bottom_btn2{
@@ -72,7 +66,6 @@
 .tests_card_bottom_btn2{
     background: #F75929;
     opacity: 1;
-    position: absolute;
     right: 120px;
 }
 
@@ -108,14 +101,41 @@ form {
     height: 20px;
 }
 
-.navigation {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 20px;
-}
-
 .question_text{
     font-size: 28px;
     font-family: Montserrat;
     font-weight: 500;
+}
+
+.answers_row{
+    margin-top: 18px;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.answers_row input{
+    width: 20px;
+    height: 20px;
+}
+
+.answers_row label{
+    font-size: 24px;
+}
+
+.res_name{
+    font-size: 28px;
+    line-height: 28px;
+    font-weight: 500;
+    margin-right: 15px;
+}
+
+.res_input{
+    padding: 25px;
+    width: 100%;
+    border: 1px solid #dfd7d7;
+    border-radius: 16px;
+    background: #f7f2f2;
+    font-size: 24px;
+    outline: none;
 }

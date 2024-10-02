@@ -29,9 +29,10 @@
 .navbar{
     position: fixed;
     width: 100%;
-    padding: 18px 0;
     background: rgb(252, 250, 250);
+    padding: 30px 0;
     z-index: 100000;
+    transition: .5s ease;
 }
 
 .navigation {
@@ -44,10 +45,6 @@
     display: flex;
     align-items: center;
     gap: 16px;
-}
-
-.nav__logo img {
-    height: 65px;
 }
 
 .nav__logo p {
