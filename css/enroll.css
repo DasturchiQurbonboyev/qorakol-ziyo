@@ -58,6 +58,33 @@
 
 }
 
+.phone-input {
+    display: flex;
+    align-items: center;
+    border: 1px solid #ccc;
+    padding: 10px;
+    border-radius: 8px;
+    background-color: #fff;
+}
+
+.phone-input img {
+    margin-right: 10px;
+    width: 25px;
+    height: auto;
+}
+.phone-input label{
+    width: 48px;
+    font-size: 18px;
+    padding-top: 2px;
+}
+
+#phoneInput {
+    border: none;
+    outline: none;
+    font-size: 18px;
+    flex-grow: 1;
+}
+
 
 
 .enroll_box_btn{

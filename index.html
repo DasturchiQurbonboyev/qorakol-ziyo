@@ -936,14 +936,18 @@
                 id=""
                 placeholder="Ismingizni kiriting"
               />
-              <div class="enroll_box_phone">
-                <img src="image/enroll/uzbekistan.svg" alt="" />
+              <div class="enroll_box_phon phone-input">
+                <img
+                  class="phone-flag"
+                  src="image/enroll/uzbekistan.svg"
+                  alt=""
+                />
+                <label style="color: black" for="">+998</label>
                 <input
-                  class=""
-                  type="number"
-                  name=""
-                  id=""
-                  placeholder="+998 99 - 99-9999"
+                  type="tel"
+                  onkeydown="phoneNumberFormatter()"
+                  id="phoneInput"
+                  placeholder="(__)___-__-__"
                 />
               </div>
               <button class="enroll_box_btn">Bepul darsga yozilish</button>
@@ -1127,6 +1131,7 @@
     <script src="js/index.js"></script>
     <script src="js/experiens.js"></script>
     <script src="js/news.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/inputmask/5.0.7/inputmask.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/js/splide.min.js"></script>
   </body>
