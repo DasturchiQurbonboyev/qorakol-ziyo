@@ -4,8 +4,6 @@
 }
 
 .thoughts_box{
-    /* display: flex; */
-    /* gap: 20px; */
     margin-top: 60px;
 }
 
@@ -60,3 +58,4 @@
     -webkit-box-orient: vertical;
     overflow: hidden;
 }
+
