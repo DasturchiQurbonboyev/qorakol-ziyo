@@ -11,10 +11,10 @@
     display: grid;
     gap: 24px;
     max-width: 480px;
-    width: 100%;
+    /* width: 100%; */
 }
 
-.questions div{
+.questions .btn-plyus{
     height: 64px;
     padding: 12px 20px;
     background: #2D487D;
@@ -68,4 +68,63 @@
     line-height: 21px;
     text-align: left;
     margin-top: 17px;
+}
+
+
+
+.question_answers{
+    background: #2D487D;
+    border-radius: 16px;
+    padding: 8px 5px;
+}
+
+
+.btn-plyus{
+    display: flex;
+    justify-content: space-between;
+}
+
+.btn-plyus p{
+    font-family: Montserrat;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 21px;
+    text-align: left;
+    color: white;
+}
+
+.savollar_btn {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.savollar_btn img {
+    transition: transform 0.5s ease;
+}
+
+.rotate {
+    transform: rotate(45deg);
+}
+
+
+.answer {
+    height: 0;
+    opacity: 0;
+    overflow: hidden;
+    transition: height 0.5s ease-in-out, opacity 0.5s ease-in-out;
+    padding: 0 25px ;
+    color: white;
+    font-family: Montserrat;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 19.5px;
+    text-align: left;
+    color: white;
+}
+
+
+.answer.show {
+    height: 40px;
+    opacity: 1;
 }
