@@ -107,3 +107,52 @@
     cursor: pointer;
 }
 
+
+.vido_iframe{
+    display: none;
+    position: fixed;
+    background: rgb(92, 85, 85, 0.5);
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: 1000000;
+    opacity: 0;
+    transition: opacity .5s ease;
+
+}
+
+
+.vido_iframe iframe{
+    /* display: none */
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1000001;
+}
+
+.iframe_close{
+    top: 50px;
+    z-index: 1000002;
+    background: #726a6a;
+    height: 80px;
+    width: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    transform: rotate(45deg);
+    position: absolute;
+    right: 50px;
+    cursor: pointer;
+}
+
+.iframe_close img{
+    width: 60px;
+}
+
+.show_iframe{
+    display: block;
+    opacity: 1;
+}
