@@ -1,3 +1,8 @@
+.partners_box{
+    max-width: 1280px;
+    overflow: hidden;
+}
+
 .partners{
     display: flex;
     gap: 24px;
@@ -19,4 +24,42 @@
 
 .partners_card img{
     width: 100%;
+}
+
+  .marquee {
+      display: inline-block;
+      white-space: nowrap;
+      overflow: hidden;
+      box-sizing: border-box;
+      animation: marquee 20s linear infinite;
+  }
+
+@keyframes marquee {
+    0% {
+        transform: translateX(0);
+    }
+
+    50% {
+        transform: translateX(-100%);
+    }
+
+    50.01% {
+        transform: translateX(100%);
+    }
+
+    100% {
+        transform: translateX(0%);
+    }
+}
+
+@media (max-width:1024px) {
+    .partners_card{
+        width: 250px;
+    }
+}
+
+@media (max-width:750px) {
+    .partners_card {
+        width: 220px;
+    }
 }

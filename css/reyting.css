@@ -35,3 +35,35 @@
         text-align: left;
         color: #2D487D;
 }
+
+
+
+@media (max-width:1050px) {
+    .reyting_card h3{
+        font-size: 35px;
+    }
+
+    .reyting_card p{
+        font-size: 16px;
+    }
+}
+
+@media (max-width:932px) {
+    .reyting{
+    grid-template-columns: repeat(2, 1fr);
+    }
+
+    .reyting_card h3{
+        font-size: 28px;
+    }
+}
+
+@media (max-width:550px) {
+    .reyting {
+            grid-template-columns: repeat(1, 1fr);
+    }
+
+    .reyting_card{
+        height: 150px;
+    }
+}

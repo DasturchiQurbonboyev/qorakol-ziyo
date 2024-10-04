@@ -11,7 +11,7 @@
     display: grid;
     gap: 24px;
     max-width: 480px;
-    /* width: 100%; */
+    width: 100%;
 }
 
 .questions .btn-plyus{
@@ -36,7 +36,8 @@
     padding: 16px;
     border: 1px solid #F75929;
     border-radius: 24px;
-    max-width: 360px;
+    max-width: 360px!important;
+    width: 100% !important;
     max-height: 506px;
 }
 
@@ -127,5 +128,55 @@
 .answer.show {
     height: 40px;
     opacity: 1;
+}
+
+
+
+@media (max-width:1100px) {
+    .news_card{
+        max-width: 300px !important;
+    }
+
+    .news_card_text{
+        display: -webkit-box;
+            -webkit-line-clamp: 4;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+    }
+}
+
+@media (max-width:1000px) {
+.questions_news{
+    gap: 20px;
+}
+}
+
+@media (max-width:920px) {
+    .questions_news{
+        display: block;/
+        /* flex-direction: column; */
+    }
+    .news{
+        gap: 0;
+    }
+    #card-wrapper {
+        padding-left:0;
+        max-width: 750px !important;
+    }
+    
+}
+
+@media (max-width:800px) {
+    #card-wrapper{
+        max-width: 630px;
+    }
+
+    .questions_news .swiper{
+        margin-top: 50px;
+    }
+
+    .questions{
+        max-width: none;
+    }
 }
 

@@ -7,6 +7,10 @@
     margin-top: 60px;
 }
 
+#card-wrapper{
+    padding-left: 0;
+}
+
 .thoughts_box_flex{
     display: flex;
     gap: 20px;
@@ -21,8 +25,8 @@
     max-height: 506px;
 }
 
-.thoughts_card:nth-last-child(2n-1){
-    margin-top: 80px;
+.thoughts_card:nth-last-child(2n){
+    margin-top: 70px;
 }
 
 .thoughts_card_btn{
@@ -35,6 +39,7 @@
 
 .thoughts_card_img img{
     border-radius: 24px;
+    width: 100%;
 }
 
 .thoughts_card_title{
@@ -58,4 +63,24 @@
     -webkit-box-orient: vertical;
     overflow: hidden;
 }
+
+
+
+@media (max-width:1024px) {
+    .thoughts_card {
+        max-width: 300px;
+    }
+}
+    
+    @media (max-width:1024px) {
+        .thoughts_card {
+            max-width: 280px;
+        }
+    }
+ @media (max-width:550px) {
+     .thoughts_card_title{
+        font-size: 22px;
+     }
+ }
+
 

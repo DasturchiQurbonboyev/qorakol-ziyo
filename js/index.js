@@ -6,7 +6,7 @@ window.addEventListener('scroll', () => {
     if (window.scrollY > 50) {
         navbar.style.padding = '18px 0';
     } else {
-        navbar.style.padding = '30px 0';
+        navbar.style.padding = '25px 0';
     }
 });
 
@@ -131,3 +131,21 @@ showQuestion();
 
 // -------------------------------
 
+
+
+
+
+//--------- NAVBAR TOGGLE Start---------------//
+
+
+
+const navToggle =document.querySelector(".nav_toggle")
+const navList = document.querySelector(".nav__list")
+navToggle.onclick = function(){
+    navToggle.classList.toggle("active_toggle")
+    navList.classList.toggle("active_nav_list")
+
+}
+
+
+//--------- NAVBAR TOGGLE END---------------//

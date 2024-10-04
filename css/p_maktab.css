@@ -30,7 +30,8 @@
 }
 
 .p_maktab_card {
-    width: 360px;
+    max-width: 360px;
+    width: 100%;
     height: 180px;
     padding: 24px;
     border-radius: 12px;
@@ -38,6 +39,7 @@
     background-image: url(../image/p_maktab/card.png);
     background-repeat: no-repeat;
     background-position: center;
+    background-size: contain;
 }
 
 
@@ -97,4 +99,97 @@
     color: #2D487D;
     text-decoration: none;
     max-width: 313px;
+}
+
+
+
+@media (max-width:1175px) {
+    .p_maktab_box{
+        gap: 20px;
+    }
+
+    .p_maktab_card_text p{
+        font-size :20px ;
+    }
+
+}
+
+@media (max-width:1060px) {
+    .p_maktab_box{
+        /* display: flex; */
+        /* flex-wrap: wrap; */
+        /* justify-content: center; */
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: center;
+    }
+
+    .p_maktab_card{
+        width: 360px;
+    }
+}
+
+
+
+@media (max-width:900px) {
+    .p_maktab_title {
+        font-size: 35px;
+        line-height: 40px;
+    }
+
+    .p_maktab_text{
+        font-size: 18px;
+        line-height: 30px;
+    }
+
+
+}
+
+
+@media (max-width:800px) {
+    .p_maktab_card {
+        width: 310px;
+        height: 160px;
+    }
+
+    .p_maktab_card_text p{
+        font-size: 18px;
+        line-height: 25px;
+    }
+
+    .p_maktab_btn{
+        font-size: 18px;
+        padding: 18px 10px;
+        width: 100%;
+        text-align: center;
+    }
+}
+
+@media (max-width:700px) {
+    
+    .p_maktab_title {
+            font-size: 30px;
+            line-height: 40px;
+        }
+
+    .p_maktab_box {
+        grid-template-columns: none;
+        justify-content: center;
+    }
+
+    .p_maktab_card {
+        width: 310px;
+        height: 160px;
+    }
+
+    .p_maktab_card_text p {
+        font-size: 18px;
+        line-height: 25px;
+    }
+    
+    .p_maktab_btn {
+        font-size: 16px;
+        padding: 15px 10px;
+        width: 100%;
+        text-align: center;
+    }
 }

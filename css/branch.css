@@ -1,5 +1,3 @@
-.p_maktab_title {}
-
 .branch_card_title {
     font-family: Bebas Neue;
     font-size: 36px;
@@ -85,11 +83,70 @@
 }
 
 .branc_btn{
-    padding: 12px 75px;
+    padding: 12px 20px;
+    width: 100%;
+    text-align: center;
     font-family: Bebas Neue;
     font-size: 24px;
     font-weight: 400;
     line-height: 36px;
-    text-align: left;
     color: white;
+}
+
+
+@media (max-width:1080px) {
+    .branch_card_title{
+        font-size: 30px;
+        margin-top: 5px;
+        line-height: 35px;
+    }
+
+    .branch_card{
+        padding: 15px;
+    }
+
+    .branch_text{
+        font-size: 16px;
+    }
+
+    .branch_card_btn{
+        margin-top: 20px;
+    }
+
+    .branc_btn{
+        font-size: 24px;
+        letter-spacing: 1px;
+    }
+}
+
+@media (max-width:970px) {
+    .branch{
+    grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width:630px) {
+    .branch {
+        width: 80%;
+        margin: 0 auto;
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .branch_title{
+        margin-bottom: 40px;
+    }
+
+    .branch_card_title{
+        font-size: 24px;
+    }
+
+    .branc_btn{
+        font-size: 22px;
+    }
+}
+
+@media (max-width:450px) {
+    .branch {
+        width: 90%;
+    }
 }

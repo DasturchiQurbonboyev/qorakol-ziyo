@@ -60,6 +60,17 @@
           <li><a href="#">Natijalar</a></li>
           <li><a href="#filiallar">Filiallar</a></li>
           <li><a href="#enroll">Bog‘lanish</a></li>
+          <li class="navbar__contact_list">
+            <div class="nav__contact">
+              <a href="tel:+99899999964400">+998 99 99 996 44 00</a>
+              <span>Biz bilan bog‘laning</span>
+            </div>
+          </li>
+          <li class="nav__btn_list">
+            <a href="#enroll">
+              <button class="nav__btn btn">Bepul konsultatsiya</button>
+            </a>
+          </li>
         </ul>
         <div class="navbar__contact">
           <div class="nav__contact">
@@ -69,6 +80,11 @@
           <a href="#enroll">
             <button class="nav__btn btn">Bepul konsultatsiya</button>
           </a>
+        </div>
+        <div class="nav_toggle">
+          <span class="common top_line"></span>
+          <span class="common middle_line"></span>
+          <span class="common bottom_line"></span>
         </div>
       </nav>
     </header>
@@ -202,7 +218,9 @@
       <section id="about_qorakol" class="section">
         <div class="about_qorakol">
           <div class="container">
-            <h2 class="qorakol_title">QORAKO'L ZIYO O'QUV MARKAZI HAQIDA</h2>
+            <h2 class="qorakol_title p_maktab_title">
+              QORAKO'L ZIYO O'QUV MARKAZI HAQIDA
+            </h2>
             <div class="qorakol">
               <!-- Left Content -->
               <div class="left_content">
@@ -446,22 +464,24 @@
           <h2 class="p_maktab_title partners_title">
             Biz bilan birga ishlaydigan <span>Hamkorlarimiz</span>
           </h2>
-          <marquee style="display: flex" behavior="scroll" direction="left">
-            <div class="partners">
-              <div class="partners_card">
-                <img src="image/partners/Behance-Logo.png" alt="" />
-              </div>
-              <div class="partners_card">
-                <img src="image/partners/craft.webp" alt="" />
-              </div>
-              <div class="partners_card">
-                <img src="image/partners/Dribbble-Logo.png" alt="" />
-              </div>
-              <div class="partners_card">
-                <img src="image/partners/Google_2015_logo.svg.webp" alt="" />
+          <div class="partners_box">
+            <div class="marquee">
+              <div class="partners">
+                <div class="partners_card">
+                  <img src="image/partners/Behance-Logo.png" alt="" />
+                </div>
+                <div class="partners_card">
+                  <img src="image/partners/craft.webp" alt="" />
+                </div>
+                <div class="partners_card">
+                  <img src="image/partners/Dribbble-Logo.png" alt="" />
+                </div>
+                <div class="partners_card">
+                  <img src="image/partners/Google_2015_logo.svg.webp" alt="" />
+                </div>
               </div>
             </div>
-          </marquee>
+          </div>
         </div>
       </section>
 
@@ -471,89 +491,172 @@
 
       <section class="section">
         <div class="container">
-          <div class="thoughts">
+          <div class="thoughts swiper">
             <h2 class="thoughts_title p_maktab_title">
               <span>markaz haqida fikrlar</span>ni o‘quvchilarimiz va ularning
               ota-onasidan eshitamiz
             </h2>
-            <div class="thoughts_box thoughts_box_flex">
-              <div class="thoughts_card">
-                <div class="thoughts_card_img thoughts_card_btn">
-                  <div>
-                    <img src="image/thoughts/Lobar Sobirova.png" alt="" />
+            <div class="card-wrapper wrapper_th" id="card-wrapper">
+              <div class="thoughts_box swiper-wrapper thoughts_box_flex">
+                <div class="thoughts_card swiper-slide">
+                  <div class="thoughts_card_img thoughts_card_btn">
+                    <div>
+                      <img
+                        src="image/thoughts/Lobar Sobirova.png"
+                        alt="Lobar Sobirova"
+                      />
+                    </div>
+                    <div class="right_content_btn">
+                      <button class="open_iframe">
+                        <img
+                          src="image/about qorakol/btn_play.svg"
+                          alt="Play button"
+                        />
+                      </button>
+                    </div>
                   </div>
-                  <div class="right_content_btn">
-                    <button class="open_iframe">
-                      <img src="image/about qorakol/btn_play.svg" alt="" />
-                    </button>
-                  </div>
+                  <h5 class="thoughts_card_title">Lobar Sobirova</h5>
+                  <p class="thoughts_card_text">
+                    Farzandim <strong>“Qorako’l Ziyo”</strong> o’quv markazida
+                    <strong>9 oy</strong> davomida tayyorlandi va O’zbekiston
+                    Davlat Jahon tillari universiteti Filiologiya Ingliz tili
+                    yo’nalishi talabasiga aylandi.
+                  </p>
                 </div>
-                <h5 class="thoughts_card_title">Lobar Sobirova</h5>
-                <p class="thoughts_card_text">
-                  Farzandim <strong>“Qorako’l Ziyo”</strong> o’quv markazida
-                  <strong>9 oy</strong> davomida tayyorlandi va O’zbekiston
-                  Davlat Jahon tillari universiteti Filiologiya Ingliz tili
-                  yo’nalishi talabasiga aylandi.
-                </p>
-              </div>
-              <div class="thoughts_card">
-                <div class="thoughts_card_img thoughts_card_btn">
-                  <div>
-                    <img src="image/thoughts/Lobar Sobirova.png" alt="" />
+                <div class="thoughts_card swiper-slide">
+                  <div class="thoughts_card_img thoughts_card_btn">
+                    <div>
+                      <img
+                        src="image/thoughts/Lobar Sobirova.png"
+                        alt="Lobar Sobirova"
+                      />
+                    </div>
+                    <div class="right_content_btn">
+                      <button class="open_iframe">
+                        <img
+                          src="image/about qorakol/btn_play.svg"
+                          alt="Play button"
+                        />
+                      </button>
+                    </div>
                   </div>
-                  <div class="right_content_btn">
-                    <button class="open_iframe">
-                      <img src="image/about qorakol/btn_play.svg" alt="" />
-                    </button>
-                  </div>
+                  <h5 class="thoughts_card_title">Lobar Sobirova</h5>
+                  <p class="thoughts_card_text">
+                    Farzandim <strong>“Qorako’l Ziyo”</strong> o’quv markazida
+                    <strong>9 oy</strong> davomida tayyorlandi va O’zbekiston
+                    Davlat Jahon tillari universiteti Filiologiya Ingliz tili
+                    yo’nalishi talabasiga aylandi.
+                  </p>
                 </div>
-                <h5 class="thoughts_card_title">Lobar Sobirova</h5>
-                <p class="thoughts_card_text">
-                  Farzandim <strong>“Qorako’l Ziyo”</strong> o’quv markazida
-                  <strong>9 oy</strong> davomida tayyorlandi va O’zbekiston
-                  Davlat Jahon tillari universiteti Filiologiya Ingliz tili
-                  yo’nalishi talabasiga aylandi.
-                </p>
-              </div>
-              <div class="thoughts_card">
-                <div class="thoughts_card_img thoughts_card_btn">
-                  <div>
-                    <img src="image/thoughts/Lobar Sobirova.png" alt="" />
+                <div class="thoughts_card swiper-slide">
+                  <div class="thoughts_card_img thoughts_card_btn">
+                    <div>
+                      <img
+                        src="image/thoughts/Lobar Sobirova.png"
+                        alt="Lobar Sobirova"
+                      />
+                    </div>
+                    <div class="right_content_btn">
+                      <button class="open_iframe">
+                        <img
+                          src="image/about qorakol/btn_play.svg"
+                          alt="Play button"
+                        />
+                      </button>
+                    </div>
                   </div>
-                  <div class="right_content_btn">
-                    <button class="open_iframe">
-                      <img src="image/about qorakol/btn_play.svg" alt="" />
-                    </button>
-                  </div>
+                  <h5 class="thoughts_card_title">Lobar Sobirova</h5>
+                  <p class="thoughts_card_text">
+                    Farzandim <strong>“Qorako’l Ziyo”</strong> o’quv markazida
+                    <strong>9 oy</strong> davomida tayyorlandi va O’zbekiston
+                    Davlat Jahon tillari universiteti Filiologiya Ingliz tili
+                    yo’nalishi talabasiga aylandi.
+                  </p>
                 </div>
-                <h5 class="thoughts_card_title">Lobar Sobirova</h5>
-                <p class="thoughts_card_text">
-                  Farzandim <strong>“Qorako’l Ziyo”</strong> o’quv markazida
-                  <strong>9 oy</strong> davomida tayyorlandi va O’zbekiston
-                  Davlat Jahon tillari universiteti Filiologiya Ingliz tili
-                  yo’nalishi talabasiga aylandi.
-                </p>
-              </div>
-              <div class="thoughts_card">
-                <div class="thoughts_card_img thoughts_card_btn">
-                  <div>
-                    <img src="image/thoughts/Lobar Sobirova.png" alt="" />
+                <div class="thoughts_card swiper-slide">
+                  <div class="thoughts_card_img thoughts_card_btn">
+                    <div>
+                      <img
+                        src="image/thoughts/Lobar Sobirova.png"
+                        alt="Lobar Sobirova"
+                      />
+                    </div>
+                    <div class="right_content_btn">
+                      <button class="open_iframe">
+                        <img
+                          src="image/about qorakol/btn_play.svg"
+                          alt="Play button"
+                        />
+                      </button>
+                    </div>
                   </div>
-                  <div class="right_content_btn">
-                    <button class="open_iframe">
-                      <img src="image/about qorakol/btn_play.svg" alt="" />
-                    </button>
-                  </div>
+                  <h5 class="thoughts_card_title">Lobar Sobirova</h5>
+                  <p class="thoughts_card_text">
+                    Farzandim <strong>“Qorako’l Ziyo”</strong> o’quv markazida
+                    <strong>9 oy</strong> davomida tayyorlandi va O’zbekiston
+                    Davlat Jahon tillari universiteti Filiologiya Ingliz tili
+                    yo’nalishi talabasiga aylandi.
+                  </p>
                 </div>
-                <h5 class="thoughts_card_title">Lobar Sobirova</h5>
-                <p class="thoughts_card_text">
-                  Farzandim <strong>“Qorako’l Ziyo”</strong> o’quv markazida
-                  <strong>9 oy</strong> davomida tayyorlandi va O’zbekiston
-                  Davlat Jahon tillari universiteti Filiologiya Ingliz tili
-                  yo’nalishi talabasiga aylandi.
-                </p>
+                <div class="thoughts_card swiper-slide">
+                  <div class="thoughts_card_img thoughts_card_btn">
+                    <div>
+                      <img
+                        src="image/thoughts/Lobar Sobirova.png"
+                        alt="Lobar Sobirova"
+                      />
+                    </div>
+                    <div class="right_content_btn">
+                      <button class="open_iframe">
+                        <img
+                          src="image/about qorakol/btn_play.svg"
+                          alt="Play button"
+                        />
+                      </button>
+                    </div>
+                  </div>
+                  <h5 class="thoughts_card_title">Lobar Sobirova</h5>
+                  <p class="thoughts_card_text">
+                    Farzandim <strong>“Qorako’l Ziyo”</strong> o’quv markazida
+                    <strong>9 oy</strong> davomida tayyorlandi va O’zbekiston
+                    Davlat Jahon tillari universiteti Filiologiya Ingliz tili
+                    yo’nalishi talabasiga aylandi.
+                  </p>
+                </div>
+                <div class="thoughts_card swiper-slide">
+                  <div class="thoughts_card_img thoughts_card_btn">
+                    <div>
+                      <img
+                        src="image/thoughts/Lobar Sobirova.png"
+                        alt="Lobar Sobirova"
+                      />
+                    </div>
+                    <div class="right_content_btn">
+                      <button class="open_iframe">
+                        <img
+                          src="image/about qorakol/btn_play.svg"
+                          alt="Play button"
+                        />
+                      </button>
+                    </div>
+                  </div>
+                  <h5 class="thoughts_card_title">Lobar Sobirova</h5>
+                  <p class="thoughts_card_text">
+                    Farzandim <strong>“Qorako’l Ziyo”</strong> o’quv markazida
+                    <strong>9 oy</strong> davomida tayyorlandi va O’zbekiston
+                    Davlat Jahon tillari universiteti Filiologiya Ingliz tili
+                    yo’nalishi talabasiga aylandi.
+                  </p>
+                </div>
+                <div class="swiper-pagination"></div>
+                <!-- Navigation Buttons -->
+                <div class="swiper-slide-button swiper-button-prev"></div>
+                <div class="swiper-slide-button swiper-button-next"></div>
+
+                <!-- Add more cards as needed -->
               </div>
             </div>
+
             <div class="vido_iframe">
               <buttom class="iframe_close">
                 <img src="image/news/plus.svg" alt="" />
@@ -1022,48 +1125,141 @@
                 </div>
               </div>
             </div>
-            <div class="news">
-              <div class="news_card">
-                <div class="news_card_img">
-                  <img src="image/thoughts/Lobar Sobirova.png" alt="" />
+            <div class="swiper">
+              <div class="card-wrapper" id="card-wrapper">
+                <div class="news swiper-wrapper">
+                  <div class="news_card swiper-slide">
+                    <div class="news_card_img">
+                      <img src="image/thoughts/Lobar Sobirova.png" alt="" />
+                    </div>
+                    <h5 class="news_card_title">
+                      "Qorako'l Ziyo" da 3-4-sinflar o'rtasida bepul olimpiada
+                      bo'lib o'tadi.
+                    </h5>
+                    <p
+                      class="news_card_text"
+                      title='🥇Oltin medali bilan eng yuqori natijaga erishgan 5 ta
+                      o`quvchi taqdirlanadi. Ularga diplom, "Yosh iqtidor
+                      egalari uchun" kitoblari📚 va 400.000 so`mlik vaucherlar
+                      beriladi.'
+                    >
+                      🥇Oltin medali bilan eng yuqori natijaga erishgan 5 ta
+                      o`quvchi taqdirlanadi. Ularga diplom, "Yosh iqtidor
+                      egalari uchun" kitoblari📚 va 400.000 so'mlik vaucherlar
+                      beriladi.
+                    </p>
+                  </div>
+                  <div class="news_card swiper-slide">
+                    <div class="news_card_img">
+                      <img src="image/thoughts/Lobar Sobirova.png" alt="" />
+                    </div>
+                    <h5 class="news_card_title">
+                      "Qorako'l Ziyo" da 3-4-sinflar o'rtasida bepul olimpiada
+                      bo'lib o'tadi.
+                    </h5>
+                    <p
+                      class="news_card_text"
+                      title='🥇Oltin medali bilan eng yuqori natijaga erishgan 5 ta
+                      o`quvchi taqdirlanadi. Ularga diplom, "Yosh iqtidor
+                      egalari uchun" kitoblari📚 va 400.000 so`mlik vaucherlar
+                      beriladi.'
+                    >
+                      🥇Oltin medali bilan eng yuqori natijaga erishgan 5 ta
+                      o`quvchi taqdirlanadi. Ularga diplom, "Yosh iqtidor
+                      egalari uchun" kitoblari📚 va 400.000 so'mlik vaucherlar
+                      beriladi.
+                    </p>
+                  </div>
+                  <div class="news_card swiper-slide">
+                    <div class="news_card_img">
+                      <img src="image/thoughts/Lobar Sobirova.png" alt="" />
+                    </div>
+                    <h5 class="news_card_title">
+                      "Qorako'l Ziyo" da 3-4-sinflar o'rtasida bepul olimpiada
+                      bo'lib o'tadi.
+                    </h5>
+                    <p
+                      class="news_card_text"
+                      title='🥇Oltin medali bilan eng yuqori natijaga erishgan 5 ta
+                      o`quvchi taqdirlanadi. Ularga diplom, "Yosh iqtidor
+                      egalari uchun" kitoblari📚 va 400.000 so`mlik vaucherlar
+                      beriladi.'
+                    >
+                      🥇Oltin medali bilan eng yuqori natijaga erishgan 5 ta
+                      o`quvchi taqdirlanadi. Ularga diplom, "Yosh iqtidor
+                      egalari uchun" kitoblari📚 va 400.000 so'mlik vaucherlar
+                      beriladi.
+                    </p>
+                  </div>
+                  <div class="news_card swiper-slide">
+                    <div class="news_card_img">
+                      <img src="image/thoughts/Lobar Sobirova.png" alt="" />
+                    </div>
+                    <h5 class="news_card_title">
+                      "Qorako'l Ziyo" da 3-4-sinflar o'rtasida bepul olimpiada
+                      bo'lib o'tadi.
+                    </h5>
+                    <p
+                      class="news_card_text"
+                      title='🥇Oltin medali bilan eng yuqori natijaga erishgan 5 ta
+                      o`quvchi taqdirlanadi. Ularga diplom, "Yosh iqtidor
+                      egalari uchun" kitoblari📚 va 400.000 so`mlik vaucherlar
+                      beriladi.'
+                    >
+                      🥇Oltin medali bilan eng yuqori natijaga erishgan 5 ta
+                      o`quvchi taqdirlanadi. Ularga diplom, "Yosh iqtidor
+                      egalari uchun" kitoblari📚 va 400.000 so'mlik vaucherlar
+                      beriladi.
+                    </p>
+                  </div>
+                  <div class="news_card swiper-slide">
+                    <div class="news_card_img">
+                      <img src="image/thoughts/Lobar Sobirova.png" alt="" />
+                    </div>
+                    <h5 class="news_card_title">
+                      "Qorako'l Ziyo" da 3-4-sinflar o'rtasida bepul olimpiada
+                      bo'lib o'tadi.
+                    </h5>
+                    <p
+                      class="news_card_text"
+                      title='🥇Oltin medali bilan eng yuqori natijaga erishgan 5 ta
+                      o`quvchi taqdirlanadi. Ularga diplom, "Yosh iqtidor
+                      egalari uchun" kitoblari📚 va 400.000 so`mlik vaucherlar
+                      beriladi.'
+                    >
+                      🥇Oltin medali bilan eng yuqori natijaga erishgan 5 ta
+                      o`quvchi taqdirlanadi. Ularga diplom, "Yosh iqtidor
+                      egalari uchun" kitoblari📚 va 400.000 so'mlik vaucherlar
+                      beriladi.
+                    </p>
+                  </div>
+                  <div class="news_card swiper-slide">
+                    <div class="news_card_img">
+                      <img src="image/thoughts/Lobar Sobirova.png" alt="" />
+                    </div>
+                    <h5 class="news_card_title">
+                      "Qorako'l Ziyo" da 3-4-sinflar o'rtasida bepul olimpiada
+                      bo'lib o'tadi.
+                    </h5>
+                    <p
+                      class="news_card_text"
+                      title='🥇Oltin medali bilan eng yuqori natijaga erishgan 5 ta
+                      o`quvchi taqdirlanadi. Ularga diplom, "Yosh iqtidor
+                      egalari uchun" kitoblari📚 va 400.000 so`mlik vaucherlar
+                      beriladi.'
+                    >
+                      🥇Oltin medali bilan eng yuqori natijaga erishgan 5 ta
+                      o`quvchi taqdirlanadi. Ularga diplom, "Yosh iqtidor
+                      egalari uchun" kitoblari📚 va 400.000 so'mlik vaucherlar
+                      beriladi.
+                    </p>
+                  </div>
+
+                  <div class="swiper-pagination"></div>
+                  <!-- Navigation Buttons -->
+                  <div class="swiper-slide-button swiper-button-prev"></div>
+                  <div class="swiper-slide-button swiper-button-next"></div>
                 </div>
-                <h5 class="news_card_title">
-                  "Qorako'l Ziyo" da 3-4-sinflar o'rtasida bepul olimpiada
-                  bo'lib o'tadi.
-                </h5>
-                <p class="news_card_text">
-                  🥇Oltin medali bilan eng yuqori natijaga erishgan 5 ta
-                  o`quvchi taqdirlanadi. Ularga diplom, "Yosh iqtidor egalari
-                  uchun" kitoblari📚 va 400.000 so'mlik vaucherlar beriladi.
-                </p>
-              </div>
-              <div class="news_card">
-                <div class="news_card_img">
-                  <img src="image/thoughts/Lobar Sobirova.png" alt="" />
-                </div>
-                <h5 class="news_card_title">
-                  "Qorako'l Ziyo" da 3-4-sinflar o'rtasida bepul olimpiada
-                  bo'lib o'tadi.
-                </h5>
-                <p class="news_card_text">
-                  🥇Oltin medali bilan eng yuqori natijaga erishgan 5 ta
-                  o`quvchi taqdirlanadi. Ularga diplom, "Yosh iqtidor egalari
-                  uchun" kitoblari📚 va 400.000 so'mlik vaucherlar beriladi.
-                </p>
-              </div>
-              <div class="news_card">
-                <div class="news_card_img">
-                  <img src="image/thoughts/Lobar Sobirova.png" alt="" />
-                </div>
-                <h5 class="news_card_title">
-                  "Qorako'l Ziyo" da 3-4-sinflar o'rtasida bepul olimpiada
-                  bo'lib o'tadi.
-                </h5>
-                <p class="news_card_text">
-                  🥇Oltin medali bilan eng yuqori natijaga erishgan 5 ta
-                  o`quvchi taqdirlanadi. Ularga diplom, "Yosh iqtidor egalari
-                  uchun" kitoblari📚 va 400.000 so'mlik vaucherlar beriladi.
-                </p>
               </div>
             </div>
           </div>

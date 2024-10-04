@@ -39,12 +39,13 @@
 
 .experience_size {
     position: absolute;
-    bottom: 0px;
+    bottom: 0;
     right: 0;
     background: #F75929;
-    width: 85px;
-    height: 85px;
+    width: 30%;
+    height: 28%;
     border-radius: 16px;
+    padding-top: 10px;
     color: white;
     display: flex;
     flex-direction: column;
@@ -232,6 +233,23 @@
 .card-wrapper .swiper-slide-button {
     color: #5372F0;
     margin-top: -35px;
+}
+
+@media (max-width:1250px) {
+    .experience_size span{
+        font-size: 14px;
+    }
+    .experience_size p{
+        font-size: 22px;
+        line-height: 30px;
+    }
+}
+
+
+@media (max-width:1024px) {
+    .experience_size p{
+        line-height: 35px;
+    }
 }
 
 /* Responsive media query code for small screens */
