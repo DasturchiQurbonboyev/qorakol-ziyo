@@ -220,6 +220,10 @@ opacity: 0;
 
 @media (max-width:955px) {
 
+    .section{
+        padding: 60px 0;
+    }
+
     .nav_toggle{
         display: flex;
     }
@@ -242,7 +246,7 @@ opacity: 0;
         width: 100%;
         left: 0;
         top: 103px;
-        height: calc(100vh - 103px);
+        height: calc(100vh - 80px);
         flex-direction: column;
         justify-content: space-around;
         padding: 50px 0;

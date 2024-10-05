@@ -4,6 +4,7 @@
         linear-gradient(90deg, white 0.5px, transparent 1px),
         linear-gradient(#fff 0.5px, transparent 1px);
     background-size: 50px 50px;
+    padding: 120px 0;
 }
 
 .reyting{

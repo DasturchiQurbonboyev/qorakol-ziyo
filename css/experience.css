@@ -252,7 +252,6 @@
     }
 }
 
-/* Responsive media query code for small screens */
 @media (max-width: 768px) {
     .card-wrapper {
         margin: 0 10px 25px;
@@ -262,3 +261,51 @@
         display: none;
     }
 }
+
+
+@media (max-width:576px) {
+    .experience_card{
+        padding: 10px;
+    }
+
+   .experience_teacher_name {
+       font-size: 20px;
+       line-height: 30px;
+       margin-bottom: 0;
+       margin-top: 5px;
+   }
+
+   .experience_teacher_science{
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 20px;
+   }
+
+   .experience_size span{
+        font-size: 12px;
+   }
+
+   .experience_size p{
+    font-size: 15px;
+    line-height: 24px;
+   }
+
+   .experience_card{
+    margin-right: 0;
+    gap: 10px;
+   }
+   .experience_card{
+    margin-right: 0!important;
+   }
+
+   .experience .card-wrapper{
+    padding-left:100px;
+   }
+}
+
+@media (max-width:380px) {
+    .experience .card-wrapper {
+            padding-left: 50px;
+        }
+}
+

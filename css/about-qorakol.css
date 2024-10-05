@@ -122,9 +122,13 @@
 
 }
 
+.vido_iframe iframe{
+    width:860px;
+    height:515px
+}
+
 
 .vido_iframe iframe{
-    /* display: none */
     position: fixed;
     top: 50%;
     left: 50%;
@@ -167,6 +171,22 @@
         width: 100%;
         font-size: 16px;
     }
+
+    .vido_iframe iframe {
+        width: 600px;
+        height: 415px
+    }
+
+
+    .iframe_close {
+        height: 50px;
+        width: 50px;
+    }
+
+    .iframe_close img {
+        width: 40px;
+    }
+
 }
 
 @media (max-width:1024px) {
@@ -175,6 +195,11 @@
     }
     .qorakol_title{
         font-size: 35px;
+    }
+
+    .right_content_btn button {
+        width: 70px;
+        height: 70px;
     }
 }
 
@@ -187,6 +212,10 @@
 
 
 @media (max-width:900px) {
+    #about_qorakol{
+        padding-bottom: 200px;
+    }
+
     .qorakol{
       display: block;
       padding-bottom: 100px;
@@ -208,6 +237,61 @@
     .qorakol_title{
         font-size: 30px;
     }
+
+        .right_content_btn button {
+            width: 60px;
+            height: 60px;
+        }
+}
+
+@media (max-width:756px) {
+    .vido_iframe iframe {
+        width: 500px;
+        height: 315px
+    }
+
+
+    .iframe_close {
+        top: 150px;
+        right: 10px;
+        height: 50px;
+        width: 50px;
+    }
+
+    .iframe_close img {
+        width: 40px;
+    }
 }
 
 
+@media (max-width:600px) {
+    .vido_iframe iframe {
+        width: 340px;
+        height: 215px
+    }
+
+
+    .iframe_close {
+        height: 40px;
+        width: 40px;
+    }
+
+    .iframe_close img {
+        width: 35px;
+    }
+}
+
+
+@media (max-width:550px) {
+    .right_content_btn button {
+        width: 50px;
+        height: 50px;
+    }
+}
+
+@media (max-width:450px) {
+    .vido_iframe iframe {
+        width: 300px;
+        height: 215px
+    }
+}
