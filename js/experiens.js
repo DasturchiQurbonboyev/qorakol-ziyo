@@ -1,4 +1,4 @@
-new Swiper('.card-wrapper', {
+new Swiper('.teacher_card-wrapper', {
     loop: true,
     spaceBetween: 30,
 
@@ -15,16 +15,24 @@ new Swiper('.card-wrapper', {
         prevEl: '.swiper-button-prev',
     },
 
-    // Responsive breakpoints
+
+    loopFillGroupWithBlank: true,
+
+
+    // Responsive breakpoints     
     breakpoints: {
         0: {
             slidesPerView: 1
         },
-        768: {
+        630: {
             slidesPerView: 2
         },
-        1024: {
+        860: {
             slidesPerView: 3
+        },
+        1240: {
+            slidesPerView: 4
         }
     }
 });
+

@@ -26,7 +26,7 @@
     padding: 120px 0;
 }
 
-.navbar{
+.navbar {
     position: fixed;
     width: 100%;
     background: rgb(252, 250, 250);
@@ -48,9 +48,9 @@
 }
 
 .nav__text {
+    font-family: Montserrat;
     max-width: 186px;
     color: var(--main-color);
-    font-family: var(--font--mont);
     font-size: 12px;
     font-weight: 500;
     line-height: 18px;
@@ -75,11 +75,17 @@
 }
 
 .nav__list li a {
+    font-family: Sora;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 18px;
+    text-align: left;
     text-decoration: none;
     color: #2D487D;
 }
 
-.navbar__contact_list,.nav__btn_list{
+.navbar__contact_list,
+.nav__btn_list {
     display: none;
 }
 
@@ -118,6 +124,16 @@
     border: none;
     outline: none;
     border-radius: 50px;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.btn:hover {
+    background: #fd7a53;
+}
+
+.btn:active {
+    transform: scale(0.9);
 }
 
 .nav__btn {
@@ -129,14 +145,7 @@
     padding: 12px 21px;
 }
 
-/* toggle start */
-
-/* Checkboxni yashiramiz */
-
-/* Checkboxni yashiramiz */
-
-
-.nav_toggle{
+.nav_toggle {
     display: none;
     position: relative;
     width: 70px;
@@ -148,10 +157,10 @@
     align-items: center;
     cursor: pointer;
     overflow: hidden;
-    transition:  .3s ease
+    transition: .3s ease
 }
 
-.nav_toggle span{
+.nav_toggle span {
     position: absolute;
     width: 40px;
     height: 4px;
@@ -160,7 +169,7 @@
     transition: .5s ease;
 }
 
-.nav_toggle span:nth-child(1){
+.nav_toggle span:nth-child(1) {
     transform: translate(-15px);
     width: 25px;
     top: 15px;
@@ -182,65 +191,165 @@
 .nav_toggle.active_toggle span:nth-child(2) {
     width: 40px;
     /* transform: translateX(-5px); */
-    transform: translate(15px,-21px) rotate(315deg);
+    transform: translate(15px, -21px) rotate(315deg);
 }
 
 .nav_toggle.active_toggle span:nth-child(3) {
     transform: translateX(60px);
-opacity: 0;
+    opacity: 0;
 }
 
 
+.nav_modall{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: rgba(168, 161, 161, 0.8);
+    display: none;
+}
 
- /* toggle end */
+.active_nav_modal{
+    display: block;
+}
 
 
-@media (max-width:1190px) {
-    .nav__list{
+.close_nav_modall{
+    position: absolute;
+    bottom: 40px;
+    left: 40px;
+    background: rgb(160, 153, 153);
+    border: none;
+    width: 30%;
+    padding: 19px;
+    border-radius: 14px;
+    color: white;
+    font-weight: 600;
+    font-size: 24px;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.close_nav_modall:hover{
+    background: #b9b3b3;
+}
+
+.close_nav_modall:active{
+    transform: scale(0.9);
+}
+
+.close_nav_modall img{
+    transform: rotate(45deg);
+    z-index: 200;
+}
+
+
+.nav_modall_register{
+    position: absolute;
+    width: 60%;
+    height: 60%;
+    background: white;
+    border-radius: 25px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 40px 30px;
+}
+
+.nav_modall_register .nav_modal_inp_name,
+.nav_modall_register div{   
+    border: 1px solid #2D487D;
+    width: 70%;
+}
+
+.nav_modall_register div {
+    margin-top: 40px;
+    padding: 20px 20px;
+}
+
+.nav_modall_register .enroll_box_btn{
+    position: absolute;
+    bottom: 40px;
+    right: 40px;
+    padding: 20px;
+}
+
+
+.reveal {
+    opacity: 0;
+    transform: translateY(50px);
+    /* Pastdan yuqoriga ko'tariladi */
+    transition: all 0.8s ease;
+    /* Animatsiya davomiyligi va effekti */
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+    /* O'z joyiga qaytadi */
+}
+
+
+@media (max-width:1215px) {
+    .nav__list {
         gap: 18px;
     }
+
     .nav__logo {
 
         gap: 10px;
     }
-    .nav__text{
+
+    .nav__text {
         max-width: 130px;
     }
 }
 
-@media (max-width:1080px) {
-   .nav__text{
-    position: absolute;
-    max-width: none;
-    bottom: 10px;
-    width: 100%;
-    text-align: center;
-   }
+@media (max-width:1130px) {
+    .nav__text {
+        position: absolute;
+        max-width: none;
+        bottom: 10px;
+        width: 100%;
+        text-align: center;
+    }
 }
 
-@media (max-width:955px) {
+@media (max-width:1080px) {}
 
-    .section{
+@media (max-width:990px) {
+
+    .nav__list a {
+        font-size: 22px;
+    }
+
+    .nav__btn {
+        font-size: 20px;
+    }
+
+    .section {
         padding: 60px 0;
     }
 
-    .nav_toggle{
+    .nav_toggle {
         display: flex;
     }
 
-    .navbar__contact{
+    .navbar__contact {
         display: none;
     }
 
-    .nav__text{
+    .nav__text {
         display: none;
     }
 
-    .nav__btn_list,.navbar__contact_list{
+    .nav__btn_list,
+    .navbar__contact_list {
         display: block;
     }
 
-    .nav__list{
+    .nav__list {
         border-radius: 0;
         position: absolute;
         width: 100%;
@@ -255,25 +364,26 @@ opacity: 0;
         transition: .3s ease
     }
 
-    .active_nav_list{
+    .active_nav_list {
         transform: translateX(0);
     }
 }
 
 @media (max-width:620px) {
-    
+
     .nav__list {
-            top: 85px;
-        }
-    .nav__logo__img img{
+        top: 85px;
+    }
+
+    .nav__logo__img img {
         max-width: 120px;
     }
 
-    .nav_toggle{
+    .nav_toggle {
         width: 50px;
         height: 50px;
     }
-    
+
     .nav_toggle span {
         width: 30px;
     }
@@ -307,5 +417,5 @@ opacity: 0;
         transform: translateX(60px);
         opacity: 0;
     }
-    
+
 }

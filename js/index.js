@@ -149,3 +149,47 @@ navToggle.onclick = function(){
 
 
 //--------- NAVBAR TOGGLE END---------------//
+
+
+
+
+// -------------------- NAVBAR MODALL START ----------------//
+
+
+const navBtn =document.querySelector(".nav_btn_modall")
+const navModall = document.querySelector(".nav_modall")
+const closeNavModall =document.querySelector(".close_nav_modall")
+navBtn.onclick = function(){
+    navModall.classList.add("active_nav_modal")
+
+}
+
+closeNavModall.onclick =function (){
+    navModall.classList.remove("active_nav_modal")
+}
+
+
+// -------------------- NAVBAR MODALL EMD ----------------//
+
+// Elementlarni tekshirish funksiyasi
+function checkElements() {
+  const elements = document.querySelectorAll('.reveal');
+
+  elements.forEach(function(element) {
+    const elementTop = element.getBoundingClientRect().top;
+    const windowHeight = window.innerHeight;
+
+    // Agar element ko'rinish zonasida bo'lsa, 'active' klassini qo'shish
+    if (elementTop < windowHeight - 100) {
+      element.classList.add('active');
+    } else {
+      element.classList.remove('active'); // Sahifaga qaytganda 'active' klassini olib tashlash
+    }
+  });
+}
+
+// Sahifa yuklanganda elementlarni tekshirish
+window.addEventListener('DOMContentLoaded', checkElements);
+
+// Sahifani skroll qilganda elementlarni yana tekshirish
+window.addEventListener('scroll', checkElements);

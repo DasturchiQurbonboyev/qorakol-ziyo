@@ -45,47 +45,74 @@
     <header class="navbar" id="navbar">
       <nav class="container navigation">
         <div class="nav__logo">
-          <div class="nav__logo__img">
+          <div class="nav__logo__img reveal">
             <a href="#">
               <img src="./image/navbar/vk_logo.svg" alt="" />
             </a>
           </div>
-          <p class="nav__text">
+          <p class="nav__text reveal">
             Prezident va ixtisoslashtirilgan maktablariga tayyorlovchi o‘quv
             markaz
           </p>
         </div>
-        <ul class="nav__list">
-          <li><a href="#about_qorakol">Biz haqimizda</a></li>
-          <li><a href="#sciences">Kurslar</a></li>
-          <li><a href="#">Natijalar</a></li>
-          <li><a href="#filiallar">Filiallar</a></li>
-          <li><a href="#enroll">Bog‘lanish</a></li>
-          <li class="navbar__contact_list">
+        <ul class="nav__list reveal">
+          <li><a class="reveal" href="#about_qorakol">Biz haqimizda</a></li>
+          <li><a class="reveal" href="#sciences">Kurslar</a></li>
+          <li><a class="reveal" href="#">Natijalar</a></li>
+          <li><a class="reveal" href="#filiallar">Filiallar</a></li>
+          <li><a class="reveal" href="#enroll">Bog‘lanish</a></li>
+          <li class="navbar__contact_list reveal">
             <div class="nav__contact">
               <a href="tel:+99899999964400">+998 99 99 996 44 00</a>
               <span>Biz bilan bog‘laning</span>
             </div>
           </li>
-          <li class="nav__btn_list">
+          <li class="nav__btn_list reveal">
             <a href="#enroll">
               <button class="nav__btn btn">Bepul konsultatsiya</button>
             </a>
           </li>
         </ul>
         <div class="navbar__contact">
-          <div class="nav__contact">
+          <div class="nav__contact reveal">
             <a href="tel:+99899999964400">+998 99 99 996 44 00</a>
             <span>Biz bilan bog‘laning</span>
           </div>
-          <a href="#enroll">
-            <button class="nav__btn btn">Bepul konsultatsiya</button>
-          </a>
+          <button class="nav__btn btn nav_btn_modall reveal">
+            Bepul konsultatsiya
+          </button>
         </div>
-        <div class="nav_toggle">
+        <div class="nav_toggle reveal">
           <span class="common top_line"></span>
           <span class="common middle_line"></span>
           <span class="common bottom_line"></span>
+        </div>
+        <div class="nav_modall">
+          <div class="nav_modall_register">
+            <input
+              class="enroll_box_name nav_modal_inp_name"
+              type="text"
+              name=""
+              id=""
+              placeholder="Ismingizni kiriting"
+            />
+            <div class="enroll_box_phon phone-input">
+              <img
+                class="phone-flag"
+                src="image/enroll/uzbekistan.svg"
+                alt=""
+              />
+              <label style="color: black" for="">+998</label>
+              <input
+                type="tel"
+                onkeydown="phoneNumberFormatter()"
+                id="phoneInput"
+                placeholder="(__)___-__-__"
+              />
+            </div>
+            <button class="close_nav_modall">Yopish</button>
+            <button class="enroll_box_btn">Bepul darsga yozilish</button>
+          </div>
         </div>
       </nav>
     </header>
@@ -99,17 +126,17 @@
         <div class="container">
           <div class="hero_box">
             <div class="hero_left">
-              <div class="hero_left_line_box">
+              <div class="hero_left_line_box reveal">
                 <div class="hero_left_line"></div>
                 <p>1-9 sinf bolalari uchun</p>
               </div>
-              <h1 class="hero_title">
+              <h1 class="hero_title reveal">
                 Farzandingizni prezident maktablariga biz bilan tayyorlang
               </h1>
-              <p class="hero_left_text">
+              <p class="hero_left_text reveal">
                 Har yili eng kamida 90% o‘quvchisi talaba bo’ladi.
               </p>
-              <div class="hero_left_btn">
+              <div class="hero_left_btn reveal">
                 <a href="#enroll">
                   <button class="btn hero_btn">
                     Birinchi darsga Bepul yozilish
@@ -120,7 +147,8 @@
                 </div>
               </div>
             </div>
-            <div class="hero_reight">
+            <div class="hero_reight reveal">
+              <div class="hero_reight_img_content"></div>
               <img src="./image/hero/Subtract.png" alt="" />
             </div>
           </div>
@@ -133,16 +161,16 @@
 
       <section class="section p_maktab">
         <div class="container">
-          <h2 class="p_maktab_title">
+          <h2 class="p_maktab_title reveal">
             Nima uchun farzandingiz <span>prizdent maktabi</span>da o‘qish
             kerak?
           </h2>
-          <p class="p_maktab_text">
+          <p class="p_maktab_text reveal">
             Prizdent maktabi - ushbu maktabga barcha Ota-onalar farzandlarini
             o‘qitishni xoxlashlari shubxasiz.
           </p>
           <div class="p_maktab_box">
-            <div class="p_maktab_card">
+            <div class="p_maktab_card reveal">
               <div class="p_maktab_card_text">
                 <p>Barcha universitetlariga imtihonsiz kirish imkoniyati</p>
                 <div class="p_maktab_card_icon">
@@ -151,7 +179,7 @@
               </div>
               <span class="p_maktab_card_num">/01</span>
             </div>
-            <div class="p_maktab_card">
+            <div class="p_maktab_card reveal">
               <div class="p_maktab_card_text">
                 <p>Zamonaviy texnika va labaratoriyalar</p>
                 <div class="p_maktab_card_icon">
@@ -160,7 +188,7 @@
               </div>
               <span class="p_maktab_card_num">/02</span>
             </div>
-            <div class="p_maktab_card">
+            <div class="p_maktab_card reveal">
               <div class="p_maktab_card_text">
                 <p>Kutubxona va Sport majmuasi</p>
                 <div class="p_maktab_card_icon">
@@ -169,7 +197,7 @@
               </div>
               <span class="p_maktab_card_num">/03</span>
             </div>
-            <div class="p_maktab_card">
+            <div class="p_maktab_card reveal">
               <div class="p_maktab_card_text">
                 <p>xorijiy top universitetlarga kirish imkoniga ega bo‘ladi.</p>
                 <div class="p_maktab_card_icon">
@@ -178,7 +206,7 @@
               </div>
               <span class="p_maktab_card_num">/04</span>
             </div>
-            <div class="p_maktab_card">
+            <div class="p_maktab_card reveal">
               <div class="p_maktab_card_text">
                 <p>MAxsus tashriflar va kurslar</p>
                 <div class="p_maktab_card_icon">
@@ -187,7 +215,7 @@
               </div>
               <span class="p_maktab_card_num">/05</span>
             </div>
-            <div class="p_maktab_card">
+            <div class="p_maktab_card reveal">
               <div class="p_maktab_card_text">
                 <p>Bepul ovqatlanish va yotoqxona</p>
                 <div class="p_maktab_card_icon">
@@ -200,11 +228,13 @@
           <div class="p_maktab_btns">
             <div>
               <a href="#enroll">
-                <button class="btn p_maktab_btn">Bepul maslahat olish</button>
+                <button class="btn p_maktab_btn reveal">
+                  Bepul maslahat olish
+                </button>
               </a>
             </div>
             <br />
-            <a href="#"
+            <a class="reveal" href="#"
               >Farzandingiz kelajagi uchun to‘g‘ri tanlov qiling va biz bilan
               bog‘laning!</a
             >
@@ -219,25 +249,25 @@
       <section id="about_qorakol" class="section">
         <div class="about_qorakol">
           <div class="container">
-            <h2 class="qorakol_title p_maktab_title">
+            <h2 class="qorakol_title p_maktab_title reveal">
               QORAKO'L ZIYO O'QUV MARKAZI HAQIDA
             </h2>
             <div class="qorakol">
               <!-- Left Content -->
               <div class="left_content">
-                <p>
+                <p class="reveal">
                   <strong>"Qorako'l Ziyo"</strong> Respublikamizda, har qanday
                   statistika bo'yicha eng ko'p medal-u diplomlar 🏅🥇 olib
                   kelgan o'quv markazi hisoblanadi.
                 </p>
                 <br />
-                <p>
+                <p class="reveal">
                   Asosiy diqqatimiz farzandingizni Prezident, Al-Xorazmiy, Mirzo
                   Ulug'bek va Ixtisoslashgan maktablarga tayyorlashga
                   qaratilgan.
                 </p>
                 <br />
-                <p>
+                <p class="reveal">
                   O'quv markazimiz Toshkent shahrida o'z faoliyatini 2012-yilda
                   boshlagan, hozirda <strong>3 ta</strong> filiali mavjud.
                   Filiallarimiz <strong>Chorsu</strong>,
@@ -247,7 +277,7 @@
                   Huquq fanlari IT kurslarimiz ham bor.
                 </p>
                 <br />
-                <p>
+                <p class="reveal">
                   Darslarni <strong>5, 10</strong> va <strong>15</strong> yillik
                   tajribaga ega. Jahon va Respublika Olimpiada g'oliblari
                   bo'lgan ustozlar o'qitadi. Maqsadingizga
@@ -256,11 +286,11 @@
                 <br /><br />
                 <div class="qorakol_btn_students">
                   <a href="#enroll">
-                    <button class="btn qorakol_btn">
+                    <button class="btn qorakol_btn reveal">
                       Sinov darsiga yozilish
                     </button>
                   </a>
-                  <div class="qorakol_students_size">
+                  <div class="qorakol_students_size reveal">
                     <div class="qorakol_students">
                       <div class="qorakol_students_img1">
                         <img src="image/about qorakol/tudent1.svg" alt="" />
@@ -282,7 +312,7 @@
               </div>
 
               <!-- Right Image and Button -->
-              <div class="right_content">
+              <div class="right_content reveal">
                 <div class="right_content_img">
                   <img src="./image/about qorakol/qorakol.png" alt="" />
                 </div>
@@ -318,19 +348,19 @@
         <div class="grid_background">
           <div class="container">
             <div class="reyting">
-              <div class="reyting_card">
+              <div class="reyting_card reveal">
                 <h3>+90 %</h3>
                 <p>O‘quvchilarimiz ixtisoslashgan maktablarga kirishadi</p>
               </div>
-              <div class="reyting_card">
+              <div class="reyting_card reveal">
                 <h3>12+ yil</h3>
                 <p>O‘quv markazimizning ta'lim tajribasi</p>
               </div>
-              <div class="reyting_card">
+              <div class="reyting_card reveal">
                 <h3>98 %</h3>
                 <p>Abituriyentlarimiz har yili talabalikka tavsiya etiladi</p>
               </div>
-              <div class="reyting_card">
+              <div class="reyting_card reveal">
                 <h3>3 o’rin</h3>
                 <p>Ustozlarimizning xalqaro olimpiadada olgan o’rinlari</p>
               </div>
@@ -345,12 +375,12 @@
 
       <section id="why_qorakol" class="section why_qorakol">
         <div class="container">
-          <h2 class="p_maktab_title why_qorakol_title">
+          <h2 class="p_maktab_title why_qorakol_title reveal">
             Nima uchun Farzandingiz “<span>Qorako‘l ziyo</span>” da o‘qishi
             kerak?
           </h2>
           <div class="why_qorakol_box">
-            <div class="why_qorakol_card">
+            <div class="why_qorakol_card reveal">
               <div class="why_qorakol_icon_card">
                 <div class="why_qorakol_icon1">
                   <img
@@ -368,7 +398,7 @@
               </p>
             </div>
 
-            <div class="why_qorakol_card">
+            <div class="why_qorakol_card reveal">
               <div class="why_qorakol_icon_card">
                 <div class="why_qorakol_icon2">
                   <img
@@ -387,7 +417,7 @@
               </p>
             </div>
 
-            <div class="why_qorakol_card">
+            <div class="why_qorakol_card reveal">
               <div class="why_qorakol_icon_card">
                 <div class="why_qorakol_icon3">
                   <img
@@ -409,7 +439,7 @@
               </p>
             </div>
 
-            <div class="why_qorakol_card">
+            <div class="why_qorakol_card reveal">
               <div class="why_qorakol_icon_card">
                 <div class="why_qorakol_icon4">
                   <img
@@ -428,7 +458,7 @@
               </p>
             </div>
 
-            <div class="why_qorakol_card">
+            <div class="why_qorakol_card reveal">
               <div class="why_qorakol_icon_card">
                 <div class="why_qorakol_icon5">
                   <img
@@ -447,7 +477,7 @@
               </p>
             </div>
 
-            <div class="why_qorakol_card">
+            <div class="why_qorakol_card reveal">
               <div class="why_qorakol_icon_card">
                 <div class="why_qorakol_icon6">
                   <img
@@ -474,22 +504,25 @@
 
       <section class="section">
         <div class="container">
-          <h2 class="p_maktab_title partners_title">
+          <h2 class="p_maktab_title partners_title reveal">
             Biz bilan birga ishlaydigan <span>Hamkorlarimiz</span>
           </h2>
           <div class="partners_box">
             <div class="marquee">
               <div class="partners">
-                <div class="partners_card">
+                <div class="partners_card reveal">
                   <img src="image/partners/Behance-Logo.png" alt="" />
                 </div>
-                <div class="partners_card">
-                  <img src="image/partners/craft.webp" alt="" />
+                <div class="partners_card reveal">
+                  <img
+                    src="https://www.cdnlogo.com/logos/c/41/craft.svg"
+                    alt=""
+                  />
                 </div>
-                <div class="partners_card">
+                <div class="partners_card reveal">
                   <img src="image/partners/Dribbble-Logo.png" alt="" />
                 </div>
-                <div class="partners_card">
+                <div class="partners_card reveal">
                   <img src="image/partners/Google_2015_logo.svg.webp" alt="" />
                 </div>
               </div>
@@ -504,202 +537,224 @@
 
       <section class="section">
         <div class="container">
-          <div class="thoughts swiper">
-            <h2 class="thoughts_title p_maktab_title">
-              <span>markaz haqida fikrlar</span>ni o‘quvchilarimiz va ularning
-              ota-onasidan eshitamiz
-            </h2>
-            <div class="card-wrapper wrapper_th" id="card-wrapper">
-              <div class="thoughts_box swiper-wrapper thoughts_box_flex">
-                <div class="thoughts_card swiper-slide">
-                  <div class="thoughts_card_img thoughts_card_btn">
-                    <div>
-                      <img
-                        src="image/thoughts/Lobar Sobirova.png"
-                        alt="Lobar Sobirova"
-                      />
-                    </div>
-                    <div class="right_content_btn">
-                      <button class="open_iframe">
+          <h2 class="thoughts_title p_maktab_title reveal">
+            <span>markaz haqida fikrlar</span>ni o‘quvchilarimiz va ularning
+            ota-onasidan eshitamiz
+          </h2>
+          <div class="swiper thoughts_swiper">
+            <div class="thoughts-wrapper">
+              <ul class="card-list swiper-wrapper">
+                <li class="thoughts_card_item swiper-slide reveal">
+                  <div class="thoughts_card_item_img_box">
+                    <div class="img_thoughts_rel">
+                      <div>
                         <img
-                          src="image/about qorakol/btn_play.svg"
-                          alt="Play button"
+                          src="image/thoughts/Lobar Sobirova.png"
+                          alt="Lobar Sobirova"
                         />
-                      </button>
+                      </div>
+                      <div class="right_content_btn">
+                        <button class="open_iframe">
+                          <img
+                            src="image/about qorakol/btn_play.svg"
+                            alt="Play button"
+                          />
+                        </button>
+                      </div>
                     </div>
+                    <h5 class="thoughts_card_title">Lobar Sobirova</h5>
+                    <p
+                      class="thoughts_card_text"
+                      title="Farzandim “Qorako’l Ziyo” o’quv markazida 9 oy davomida tayyorlandi va O’zbekiston Davlat Jahon tillari universiteti Filiologiya Ingliz tili yo’nalishi talabasiga aylandi."
+                    >
+                      Farzandim <strong>“Qorako’l Ziyo”</strong> o’quv markazida
+                      <strong>9 oy</strong> davomida tayyorlandi va O’zbekiston
+                      Davlat Jahon tillari universiteti Filiologiya Ingliz tili
+                      yo’nalishi talabasiga aylandi.
+                    </p>
                   </div>
-                  <h5 class="thoughts_card_title">Lobar Sobirova</h5>
-                  <p class="thoughts_card_text">
-                    Farzandim <strong>“Qorako’l Ziyo”</strong> o’quv markazida
-                    <strong>9 oy</strong> davomida tayyorlandi va O’zbekiston
-                    Davlat Jahon tillari universiteti Filiologiya Ingliz tili
-                    yo’nalishi talabasiga aylandi.
-                  </p>
-                </div>
-                <div class="thoughts_card swiper-slide">
-                  <div class="thoughts_card_img thoughts_card_btn">
-                    <div>
-                      <img
-                        src="image/thoughts/Lobar Sobirova.png"
-                        alt="Lobar Sobirova"
-                      />
-                    </div>
-                    <div class="right_content_btn">
-                      <button class="open_iframe">
+                </li>
+                <li class="thoughts_card_item swiper-slide reveal">
+                  <div class="thoughts_card_item_img_box">
+                    <div class="img_thoughts_rel">
+                      <div>
                         <img
-                          src="image/about qorakol/btn_play.svg"
-                          alt="Play button"
+                          src="image/thoughts/Lobar Sobirova.png"
+                          alt="Lobar Sobirova"
                         />
-                      </button>
+                      </div>
+                      <div class="right_content_btn">
+                        <button class="open_iframe">
+                          <img
+                            src="image/about qorakol/btn_play.svg"
+                            alt="Play button"
+                          />
+                        </button>
+                      </div>
                     </div>
+                    <h5 class="thoughts_card_title">Lobar Sobirova</h5>
+                    <p
+                      class="thoughts_card_text"
+                      title="Farzandim “Qorako’l Ziyo” o’quv markazida 9 oy davomida tayyorlandi va O’zbekiston Davlat Jahon tillari universiteti Filiologiya Ingliz tili yo’nalishi talabasiga aylandi."
+                    >
+                      Farzandim <strong>“Qorako’l Ziyo”</strong> o’quv markazida
+                      <strong>9 oy</strong> davomida tayyorlandi va O’zbekiston
+                      Davlat Jahon tillari universiteti Filiologiya Ingliz tili
+                      yo’nalishi talabasiga aylandi.
+                    </p>
                   </div>
-                  <h5 class="thoughts_card_title">Lobar Sobirova</h5>
-                  <p class="thoughts_card_text">
-                    Farzandim <strong>“Qorako’l Ziyo”</strong> o’quv markazida
-                    <strong>9 oy</strong> davomida tayyorlandi va O’zbekiston
-                    Davlat Jahon tillari universiteti Filiologiya Ingliz tili
-                    yo’nalishi talabasiga aylandi.
-                  </p>
-                </div>
-                <div class="thoughts_card swiper-slide">
-                  <div class="thoughts_card_img thoughts_card_btn">
-                    <div>
-                      <img
-                        src="image/thoughts/Lobar Sobirova.png"
-                        alt="Lobar Sobirova"
-                      />
-                    </div>
-                    <div class="right_content_btn">
-                      <button class="open_iframe">
+                </li>
+                <li class="thoughts_card_item swiper-slide reveal">
+                  <div class="thoughts_card_item_img_box">
+                    <div class="img_thoughts_rel">
+                      <div>
                         <img
-                          src="image/about qorakol/btn_play.svg"
-                          alt="Play button"
+                          src="image/thoughts/Lobar Sobirova.png"
+                          alt="Lobar Sobirova"
                         />
-                      </button>
+                      </div>
+                      <div class="right_content_btn">
+                        <button class="open_iframe">
+                          <img
+                            src="image/about qorakol/btn_play.svg"
+                            alt="Play button"
+                          />
+                        </button>
+                      </div>
                     </div>
+                    <h5 class="thoughts_card_title">Lobar Sobirova</h5>
+                    <p
+                      class="thoughts_card_text"
+                      title="Farzandim “Qorako’l Ziyo” o’quv markazida 9 oy davomida tayyorlandi va O’zbekiston Davlat Jahon tillari universiteti Filiologiya Ingliz tili yo’nalishi talabasiga aylandi."
+                    >
+                      Farzandim <strong>“Qorako’l Ziyo”</strong> o’quv markazida
+                      <strong>9 oy</strong> davomida tayyorlandi va O’zbekiston
+                      Davlat Jahon tillari universiteti Filiologiya Ingliz tili
+                      yo’nalishi talabasiga aylandi.
+                    </p>
                   </div>
-                  <h5 class="thoughts_card_title">Lobar Sobirova</h5>
-                  <p class="thoughts_card_text">
-                    Farzandim <strong>“Qorako’l Ziyo”</strong> o’quv markazida
-                    <strong>9 oy</strong> davomida tayyorlandi va O’zbekiston
-                    Davlat Jahon tillari universiteti Filiologiya Ingliz tili
-                    yo’nalishi talabasiga aylandi.
-                  </p>
-                </div>
-                <div class="thoughts_card swiper-slide">
-                  <div class="thoughts_card_img thoughts_card_btn">
-                    <div>
-                      <img
-                        src="image/thoughts/Lobar Sobirova.png"
-                        alt="Lobar Sobirova"
-                      />
-                    </div>
-                    <div class="right_content_btn">
-                      <button class="open_iframe">
+                </li>
+                <li class="thoughts_card_item swiper-slide reveal">
+                  <div class="thoughts_card_item_img_box">
+                    <div class="img_thoughts_rel">
+                      <div>
                         <img
-                          src="image/about qorakol/btn_play.svg"
-                          alt="Play button"
+                          src="image/thoughts/Lobar Sobirova.png"
+                          alt="Lobar Sobirova"
                         />
-                      </button>
+                      </div>
+                      <div class="right_content_btn">
+                        <button class="open_iframe">
+                          <img
+                            src="image/about qorakol/btn_play.svg"
+                            alt="Play button"
+                          />
+                        </button>
+                      </div>
                     </div>
+                    <h5 class="thoughts_card_title">Lobar Sobirova</h5>
+                    <p
+                      class="thoughts_card_text"
+                      title="Farzandim “Qorako’l Ziyo” o’quv markazida 9 oy davomida tayyorlandi va O’zbekiston Davlat Jahon tillari universiteti Filiologiya Ingliz tili yo’nalishi talabasiga aylandi."
+                    >
+                      Farzandim <strong>“Qorako’l Ziyo”</strong> o’quv markazida
+                      <strong>9 oy</strong> davomida tayyorlandi va O’zbekiston
+                      Davlat Jahon tillari universiteti Filiologiya Ingliz tili
+                      yo’nalishi talabasiga aylandi.
+                    </p>
                   </div>
-                  <h5 class="thoughts_card_title">Lobar Sobirova</h5>
-                  <p class="thoughts_card_text">
-                    Farzandim <strong>“Qorako’l Ziyo”</strong> o’quv markazida
-                    <strong>9 oy</strong> davomida tayyorlandi va O’zbekiston
-                    Davlat Jahon tillari universiteti Filiologiya Ingliz tili
-                    yo’nalishi talabasiga aylandi.
-                  </p>
-                </div>
-                <div class="thoughts_card swiper-slide">
-                  <div class="thoughts_card_img thoughts_card_btn">
-                    <div>
-                      <img
-                        src="image/thoughts/Lobar Sobirova.png"
-                        alt="Lobar Sobirova"
-                      />
-                    </div>
-                    <div class="right_content_btn">
-                      <button class="open_iframe">
+                </li>
+                <li class="thoughts_card_item swiper-slide reveal">
+                  <div class="thoughts_card_item_img_box">
+                    <div class="img_thoughts_rel">
+                      <div>
                         <img
-                          src="image/about qorakol/btn_play.svg"
-                          alt="Play button"
+                          src="image/thoughts/Lobar Sobirova.png"
+                          alt="Lobar Sobirova"
                         />
-                      </button>
+                      </div>
+                      <div class="right_content_btn">
+                        <button class="open_iframe">
+                          <img
+                            src="image/about qorakol/btn_play.svg"
+                            alt="Play button"
+                          />
+                        </button>
+                      </div>
                     </div>
+                    <h5 class="thoughts_card_title">Lobar Sobirova</h5>
+                    <p
+                      class="thoughts_card_text"
+                      title="Farzandim “Qorako’l Ziyo” o’quv markazida 9 oy davomida tayyorlandi va O’zbekiston Davlat Jahon tillari universiteti Filiologiya Ingliz tili yo’nalishi talabasiga aylandi."
+                    >
+                      Farzandim <strong>“Qorako’l Ziyo”</strong> o’quv markazida
+                      <strong>9 oy</strong> davomida tayyorlandi va O’zbekiston
+                      Davlat Jahon tillari universiteti Filiologiya Ingliz tili
+                      yo’nalishi talabasiga aylandi.
+                    </p>
                   </div>
-                  <h5 class="thoughts_card_title">Lobar Sobirova</h5>
-                  <p class="thoughts_card_text">
-                    Farzandim <strong>“Qorako’l Ziyo”</strong> o’quv markazida
-                    <strong>9 oy</strong> davomida tayyorlandi va O’zbekiston
-                    Davlat Jahon tillari universiteti Filiologiya Ingliz tili
-                    yo’nalishi talabasiga aylandi.
-                  </p>
-                </div>
-                <div class="thoughts_card swiper-slide">
-                  <div class="thoughts_card_img thoughts_card_btn">
-                    <div>
-                      <img
-                        src="image/thoughts/Lobar Sobirova.png"
-                        alt="Lobar Sobirova"
-                      />
-                    </div>
-                    <div class="right_content_btn">
-                      <button class="open_iframe">
+                </li>
+                <li class="thoughts_card_item swiper-slide reveal">
+                  <div class="thoughts_card_item_img_box">
+                    <div class="img_thoughts_rel">
+                      <div>
                         <img
-                          src="image/about qorakol/btn_play.svg"
-                          alt="Play button"
+                          src="image/thoughts/Lobar Sobirova.png"
+                          alt="Lobar Sobirova"
                         />
-                      </button>
+                      </div>
+                      <div class="right_content_btn">
+                        <button class="open_iframe">
+                          <img
+                            src="image/about qorakol/btn_play.svg"
+                            alt="Play button"
+                          />
+                        </button>
+                      </div>
                     </div>
+                    <h5 class="thoughts_card_title">Lobar Sobirova</h5>
+                    <p
+                      class="thoughts_card_text"
+                      title="Farzandim “Qorako’l Ziyo” o’quv markazida 9 oy davomida tayyorlandi va O’zbekiston Davlat Jahon tillari universiteti Filiologiya Ingliz tili yo’nalishi talabasiga aylandi."
+                    >
+                      Farzandim <strong>“Qorako’l Ziyo”</strong> o’quv markazida
+                      <strong>9 oy</strong> davomida tayyorlandi va O’zbekiston
+                      Davlat Jahon tillari universiteti Filiologiya Ingliz tili
+                      yo’nalishi talabasiga aylandi.
+                    </p>
                   </div>
-                  <h5 class="thoughts_card_title">Lobar Sobirova</h5>
-                  <p class="thoughts_card_text">
-                    Farzandim <strong>“Qorako’l Ziyo”</strong> o’quv markazida
-                    <strong>9 oy</strong> davomida tayyorlandi va O’zbekiston
-                    Davlat Jahon tillari universiteti Filiologiya Ingliz tili
-                    yo’nalishi talabasiga aylandi.
-                  </p>
-                </div>
-                <div class="swiper-pagination"></div>
-                <!-- Navigation Buttons -->
-                <div class="swiper-slide-button swiper-button-prev"></div>
-                <div class="swiper-slide-button swiper-button-next"></div>
-
-                <!-- Add more cards as needed -->
-              </div>
-            </div>
-
-            <div class="vido_iframe">
-              <buttom class="iframe_close">
-                <img src="image/news/plus.svg" alt="" />
-              </buttom>
-              <iframe
-                width="860"
-                height="515"
-                src="https://www.youtube.com/embed/PhAdo6gn06c?si=iXjJ6fZMY0HbHdVK"
-                title="YouTube video player"
-                frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                referrerpolicy="strict-origin-when-cross-origin"
-                allowfullscreen
-              ></iframe>
+                </li>
+              </ul>
             </div>
           </div>
         </div>
+        <div class="vido_iframe">
+          <buttom class="iframe_close">
+            <img src="image/news/plus.svg" alt="" />
+          </buttom>
+          <iframe
+            width="860"
+            height="515"
+            src="https://www.youtube.com/embed/PhAdo6gn06c?si=iXjJ6fZMY0HbHdVK"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin"
+            allowfullscreen
+          ></iframe>
+        </div>
       </section>
-
       <!-- Thoughts End -->
 
       <!-- Sciences Start -->
 
       <section id="sciences" class="section sciences">
         <div class="container">
-          <h2 class="p_maktab_title sciences_title">
+          <h2 class="p_maktab_title sciences_title reveal">
             O‘quv markazimizdagi mavjud <span>kurslar</span>
           </h2>
           <div class="sciences_cards">
-            <div class="sciences_card">
+            <div class="sciences_card reveal">
               <div class="sciences_card_top">
                 <h5 class="sciences_card_title">Matematika</h5>
                 <div class="sciences_card_icons sciences_card_icons1">
@@ -712,7 +767,7 @@
                 </p>
               </div>
             </div>
-            <div class="sciences_card">
+            <div class="sciences_card reveal">
               <div class="sciences_card_top">
                 <h5 class="sciences_card_title">Matematika</h5>
                 <div class="sciences_card_icons sciences_card_icons2">
@@ -725,7 +780,7 @@
                 </p>
               </div>
             </div>
-            <div class="sciences_card">
+            <div class="sciences_card reveal">
               <div class="sciences_card_top">
                 <h5 class="sciences_card_title">Matematika</h5>
                 <div class="sciences_card_icons sciences_card_icons3">
@@ -738,7 +793,7 @@
                 </p>
               </div>
             </div>
-            <div class="sciences_card">
+            <div class="sciences_card reveal">
               <div class="sciences_card_top">
                 <h5 class="sciences_card_title">Matematika</h5>
                 <div class="sciences_card_icons sciences_card_icons4">
@@ -751,7 +806,7 @@
                 </p>
               </div>
             </div>
-            <div class="sciences_card">
+            <div class="sciences_card reveal">
               <div class="sciences_card_top">
                 <h5 class="sciences_card_title">Matematika</h5>
                 <div class="sciences_card_icons sciences_card_icons5">
@@ -764,7 +819,7 @@
                 </p>
               </div>
             </div>
-            <div class="sciences_card">
+            <div class="sciences_card reveal">
               <div class="sciences_card_top">
                 <h5 class="sciences_card_title">Matematika</h5>
                 <div class="sciences_card_icons sciences_card_icons6">
@@ -777,7 +832,7 @@
                 </p>
               </div>
             </div>
-            <div class="sciences_card">
+            <div class="sciences_card reveal">
               <div class="sciences_card_top">
                 <h5 class="sciences_card_title">Matematika</h5>
                 <div class="sciences_card_icons sciences_card_icons7">
@@ -790,7 +845,7 @@
                 </p>
               </div>
             </div>
-            <div class="sciences_card">
+            <div class="sciences_card reveal">
               <div class="sciences_card_top">
                 <h5 class="sciences_card_title">Matematika</h5>
                 <div class="sciences_card_icons sciences_card_icons8">
@@ -813,15 +868,15 @@
 
       <section class="section tests">
         <div class="container">
-          <div class="tests_card">
+          <div class="tests_card reveal">
             <div class="tests_card_top">
-              <p class="tests_csrd_top_text">
+              <p class="tests_csrd_top_text reveal">
                 Prezident maktabiga kirish ehtimolini bilish uchun testdan
                 o’ting
               </p>
               <p class="tests_card_top_num" id="stepCounter">1/10</p>
             </div>
-            <div class="tests_card_bottom">
+            <div class="tests_card_bottom reveal">
               <div class="question" id="quizQuestion"></div>
               <div class="tests_card_bottom_btns">
                 <button id="backBtn" class="tests_card_bottom_btn1 backBtn">
@@ -842,11 +897,11 @@
 
       <section id="filiallar" class="section">
         <div class="container">
-          <h2 class="p_maktab_title branch_title">
+          <h2 class="p_maktab_title branch_title reveal">
             O‘quv markazimiz <span>filiallari</span>
           </h2>
           <div class="branch">
-            <div class="branch_card">
+            <div class="branch_card reveal">
               <div class="branch_img">
                 <img src="image/branch/branchs.png" alt="" />
                 <div class="branch_location">
@@ -867,7 +922,7 @@
                 <button class="btn branc_btn">Filialni tanlash</button>
               </div>
             </div>
-            <div class="branch_card">
+            <div class="branch_card reveal">
               <div class="branch_img">
                 <img src="image/branch/branchs.png" alt="" />
                 <div class="branch_location">
@@ -888,7 +943,7 @@
                 <button class="btn branc_btn">Filialni tanlash</button>
               </div>
             </div>
-            <div class="branch_card">
+            <div class="branch_card reveal">
               <div class="branch_img">
                 <img src="image/branch/branchs.png" alt="" />
                 <div class="branch_location">
@@ -920,97 +975,130 @@
       <section id="teachers" class="section">
         <div class="container">
           <div class="experience">
-            <h2 class="p_maktab_title experience_title">
+            <h2 class="p_maktab_title experience_title reveal reveal">
               Darslarni <span>5</span>,<span>10</span>,<span
                 >15 yillik tajriba</span
               >
               ega jahon va respublika olimpiadasi sovrindorlari o‘tishadi
             </h2>
             <div class="swiper">
-              <div class="card-wrapper">
-                <div class="experience_cards swiper-wrapper">
-                  <div class="experience_card swiper-slide">
-                    <div class="experience_card_img">
-                      <img src="image/experience/img.png" alt="" />
-                      <div class="experience_size">
-                        <span>Tajriba</span>
-                        <p>15 yil</p>
+              <div class="teacher_card-wrapper">
+                <!-- Card slides container -->
+                <ul class="card-list swiper-wrapper">
+                  <li class="card-item swiper-slide reveal reveal">
+                    <div class="experience_card swiper-slide">
+                      <div class="experience_card_img">
+                        <div class="experience_card_img_b_a">
+                          <img
+                            src="https://ingame.ee/wp-content/uploads/2023/02/NTS08941-1200x800.jpg"
+                            alt=""
+                          />
+                        </div>
+                        <div class="experience_size_border">
+                          <div class="experience_size">
+                            <span>Tajriba</span>
+                            <p>15 yil</p>
+                          </div>
+                        </div>
                       </div>
+                      <h6 class="experience_teacher_name">Ro’ziyev baxtiyor</h6>
+                      <p class="experience_teacher_science">
+                        Matematika fani o’qituvchisi
+                      </p>
                     </div>
-                    <h6 class="experience_teacher_name">Ro’ziyev baxtiyor</h6>
-                    <p class="experience_teacher_science">
-                      Matematika fani o’qituvchisi
-                    </p>
-                  </div>
-                  <div class="experience_card swiper-slide">
-                    <div class="experience_card_img">
-                      <img src="image/experience/img.png" alt="" />
-                      <div class="experience_size">
-                        <span>Tajriba</span>
-                        <p>15 yil</p>
+                  </li>
+                  <li class="card-item swiper-slide reveal reveal">
+                    <div class="experience_card swiper-slide">
+                      <div class="experience_card_img">
+                        <div class="experience_card_img_b_a">
+                          <img
+                            src="https://ingame.ee/wp-content/uploads/2023/02/NTS08941-1200x800.jpg"
+                            alt=""
+                          />
+                        </div>
+                        <div class="experience_size_border">
+                          <div class="experience_size">
+                            <span>Tajriba</span>
+                            <p>15 yil</p>
+                          </div>
+                        </div>
                       </div>
+                      <h6 class="experience_teacher_name">Ro’ziyev baxtiyor</h6>
+                      <p class="experience_teacher_science">
+                        Matematika fani o’qituvchisi
+                      </p>
                     </div>
-                    <h6 class="experience_teacher_name">Ro’ziyev baxtiyor</h6>
-                    <p class="experience_teacher_science">
-                      Matematika fani o’qituvchisi
-                    </p>
-                  </div>
-                  <div class="experience_card swiper-slide">
-                    <div class="experience_card_img">
-                      <img src="image/experience/img.png" alt="" />
-                      <div class="experience_size">
-                        <span>Tajriba</span>
-                        <p>15 yil</p>
+                  </li>
+                  <li class="card-item swiper-slide reveal reveal">
+                    <div class="experience_card swiper-slide">
+                      <div class="experience_card_img">
+                        <div class="experience_card_img_b_a">
+                          <img
+                            src="https://ingame.ee/wp-content/uploads/2023/02/NTS08941-1200x800.jpg"
+                            alt=""
+                          />
+                        </div>
+                        <div class="experience_size_border">
+                          <div class="experience_size">
+                            <span>Tajriba</span>
+                            <p>15 yil</p>
+                          </div>
+                        </div>
                       </div>
+                      <h6 class="experience_teacher_name">Ro’ziyev baxtiyor</h6>
+                      <p class="experience_teacher_science">
+                        Matematika fani o’qituvchisi
+                      </p>
                     </div>
-                    <h6 class="experience_teacher_name">Ro’ziyev baxtiyor</h6>
-                    <p class="experience_teacher_science">
-                      Matematika fani o’qituvchisi
-                    </p>
-                  </div>
-                  <div class="experience_card swiper-slide">
-                    <div class="experience_card_img">
-                      <img src="image/experience/img.png" alt="" />
-                      <div class="experience_size">
-                        <span>Tajriba</span>
-                        <p>15 yil</p>
+                  </li>
+                  <li class="card-item swiper-slide reveal reveal">
+                    <div class="experience_card swiper-slide">
+                      <div class="experience_card_img">
+                        <div class="experience_card_img_b_a">
+                          <img
+                            src="https://ingame.ee/wp-content/uploads/2023/02/NTS08941-1200x800.jpg"
+                            alt=""
+                          />
+                        </div>
+                        <div class="experience_size_border">
+                          <div class="experience_size">
+                            <span>Tajriba</span>
+                            <p>15 yil</p>
+                          </div>
+                        </div>
                       </div>
+                      <h6 class="experience_teacher_name">Ro’ziyev baxtiyor</h6>
+                      <p class="experience_teacher_science">
+                        Matematika fani o’qituvchisi
+                      </p>
                     </div>
-                    <h6 class="experience_teacher_name">Ro’ziyev baxtiyor</h6>
-                    <p class="experience_teacher_science">
-                      Matematika fani o’qituvchisi
-                    </p>
-                  </div>
-                  <div class="experience_card swiper-slide">
-                    <div class="experience_card_img">
-                      <img src="image/experience/img.png" alt="" />
-                      <div class="experience_size">
-                        <span>Tajriba</span>
-                        <p>15 yil</p>
+                  </li>
+                  <li class="card-item swiper-slide reveal reveal">
+                    <div class="experience_card swiper-slide">
+                      <div class="experience_card_img">
+                        <div class="experience_card_img_b_a">
+                          <img
+                            src="https://ingame.ee/wp-content/uploads/2023/02/NTS08941-1200x800.jpg"
+                            alt=""
+                          />
+                        </div>
+                        <div class="experience_size_border">
+                          <div class="experience_size">
+                            <span>Tajriba</span>
+                            <p>15 yil</p>
+                          </div>
+                        </div>
                       </div>
+                      <h6 class="experience_teacher_name">Ro’ziyev baxtiyor</h6>
+                      <p class="experience_teacher_science">
+                        Matematika fani o’qituvchisi
+                      </p>
                     </div>
-                    <h6 class="experience_teacher_name">Ro’ziyev baxtiyor</h6>
-                    <p class="experience_teacher_science">
-                      Matematika fani o’qituvchisi
-                    </p>
-                  </div>
-                  <div class="experience_card swiper-slide">
-                    <div class="experience_card_img">
-                      <img src="image/experience/img.png" alt="" />
-                      <div class="experience_size">
-                        <span>Tajriba</span>
-                        <p>15 yil</p>
-                      </div>
-                    </div>
-                    <h6 class="experience_teacher_name">Ro’ziyev baxtiyor</h6>
-                    <p class="experience_teacher_science">
-                      Matematika fani o’qituvchisi
-                    </p>
-                  </div>
-                </div>
+                  </li>
+                </ul>
+                <!-- Pagination -->
               </div>
             </div>
-
             <!-- Linking SwiperJS script -->
             <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
             <!-- Linking custom script -->
@@ -1019,8 +1107,6 @@
             <div class="swiper-pagination"></div>
 
             <!-- If we need navigation buttons -->
-            <div class="swiper-button-prev"></div>
-            <div class="swiper-button-next"></div>
 
             <!-- If we need scrollbar -->
             <div class="swiper-scrollbar"></div>
@@ -1035,19 +1121,19 @@
       <section id="enroll" class="section enroll">
         <div class="container">
           <div class="enroll_box">
-            <h2 class="p_maktab_title enroll_title">
+            <h2 class="p_maktab_title enroll_title reveal">
               Bepul sinov testiga yoziling va bizda o‘qish imkoniyatiga ega
               bo‘ling. Farzandingizga fikrlashni o‘rgatamiz.
             </h2>
             <div class="enroll_box_respons">
               <input
-                class="enroll_box_name"
+                class="enroll_box_name reveal"
                 type="text"
                 name=""
                 id=""
                 placeholder="Ismingizni kiriting"
               />
-              <div class="enroll_box_phon phone-input">
+              <div class="enroll_box_phon phone-input reveal">
                 <img
                   class="phone-flag"
                   src="image/enroll/uzbekistan.svg"
@@ -1061,9 +1147,11 @@
                   placeholder="(__)___-__-__"
                 />
               </div>
-              <button class="enroll_box_btn">Bepul darsga yozilish</button>
+              <button class="enroll_box_btn reveal">
+                Bepul darsga yozilish
+              </button>
             </div>
-            <p class="enroll_operator">
+            <p class="enroll_operator reveal">
               Siz bilan tez orada bizning mutaxassislarimiz bog’lanishadi
             </p>
           </div>
@@ -1076,13 +1164,13 @@
 
       <section class="section">
         <div class="container">
-          <h2 class="p_maktab_title news_title">
+          <h2 class="p_maktab_title news_title reveal">
             Tez-Tez so’raladigan <span>savollar</span> va So‘nggi
             <span>yangiliklar</span>
           </h2>
           <div class="questions_news">
             <div class="questions">
-              <div class="question_answers">
+              <div class="question_answers reveal">
                 <div class="btn-plyus">
                   <p>Necha yoshdan qabul qilasizlar?</p>
                   <button class="savollar_btn">
@@ -1092,7 +1180,7 @@
                 <p class="answer">Biz 18 yoshdan qabul qilamiz.</p>
               </div>
 
-              <div class="question_answers">
+              <div class="question_answers reveal">
                 <div class="btn-plyus">
                   <p>Narxi qancha?</p>
                   <button class="savollar_btn">
@@ -1102,7 +1190,7 @@
                 <div class="answer">Narxi 500 000 so'm.</div>
               </div>
 
-              <div class="question_answers">
+              <div class="question_answers reveal">
                 <div class="btn-plyus">
                   <p>Qaysi fanlardan o’qitasizlar?</p>
                   <button class="savollar_btn">
@@ -1114,7 +1202,7 @@
                 </div>
               </div>
 
-              <div class="question_answers">
+              <div class="question_answers reveal">
                 <div class="btn-plyus">
                   <p>Markaz haqida to’liq ma’lumot bera olasizmi?</p>
                   <button class="savollar_btn">
@@ -1126,7 +1214,7 @@
                 </div>
               </div>
 
-              <div class="question_answers">
+              <div class="question_answers reveal">
                 <div class="btn-plyus">
                   <p>Qo’shimcha qanday bonuslar bor?</p>
                   <button class="savollar_btn">
@@ -1138,141 +1226,126 @@
                 </div>
               </div>
             </div>
-            <div class="swiper">
-              <div class="card-wrapper" id="card-wrapper">
-                <div class="news swiper-wrapper">
-                  <div class="news_card swiper-slide">
-                    <div class="news_card_img">
-                      <img src="image/thoughts/Lobar Sobirova.png" alt="" />
-                    </div>
-                    <h5 class="news_card_title">
-                      "Qorako'l Ziyo" da 3-4-sinflar o'rtasida bepul olimpiada
-                      bo'lib o'tadi.
-                    </h5>
-                    <p
-                      class="news_card_text"
-                      title='🥇Oltin medali bilan eng yuqori natijaga erishgan 5 ta
+            <div class="container swiper">
+              <div class="news_card-wrapper">
+                <!-- Card slides container -->
+                <ul class="card-list swiper-wrapper">
+                  <li class="card-item swiper-slide reveal reveal">
+                    <div class="news_card swiper-slide">
+                      <div class="news_card_img">
+                        <img src="image/thoughts/Lobar Sobirova.png" alt="" />
+                      </div>
+                      <h5 class="news_card_title">
+                        "Qorako'l Ziyo" da 3-4-sinflar o'rtasida bepul olimpiada
+                        bo'lib o'tadi.
+                      </h5>
+                      <p
+                        class="news_card_text"
+                        title='🥇Oltin medali bilan eng yuqori natijaga erishgan 5 ta
                       o`quvchi taqdirlanadi. Ularga diplom, "Yosh iqtidor
                       egalari uchun" kitoblari📚 va 400.000 so`mlik vaucherlar
                       beriladi.'
-                    >
-                      🥇Oltin medali bilan eng yuqori natijaga erishgan 5 ta
-                      o`quvchi taqdirlanadi. Ularga diplom, "Yosh iqtidor
-                      egalari uchun" kitoblari📚 va 400.000 so'mlik vaucherlar
-                      beriladi.
-                    </p>
-                  </div>
-                  <div class="news_card swiper-slide">
-                    <div class="news_card_img">
-                      <img src="image/thoughts/Lobar Sobirova.png" alt="" />
+                      >
+                        🥇Oltin medali bilan eng yuqori natijaga erishgan 5 ta
+                        o`quvchi taqdirlanadi. Ularga diplom, "Yosh iqtidor
+                        egalari uchun" kitoblari📚 va 400.000 so'mlik vaucherlar
+                        beriladi.
+                      </p>
                     </div>
-                    <h5 class="news_card_title">
-                      "Qorako'l Ziyo" da 3-4-sinflar o'rtasida bepul olimpiada
-                      bo'lib o'tadi.
-                    </h5>
-                    <p
-                      class="news_card_text"
-                      title='🥇Oltin medali bilan eng yuqori natijaga erishgan 5 ta
+                  </li>
+                  <li class="card-item swiper-slide reveal reveal">
+                    <div class="news_card swiper-slide">
+                      <div class="news_card_img">
+                        <img src="image/thoughts/Lobar Sobirova.png" alt="" />
+                      </div>
+                      <h5 class="news_card_title">
+                        "Qorako'l Ziyo" da 3-4-sinflar o'rtasida bepul olimpiada
+                        bo'lib o'tadi.
+                      </h5>
+                      <p
+                        class="news_card_text"
+                        title='🥇Oltin medali bilan eng yuqori natijaga erishgan 5 ta
                       o`quvchi taqdirlanadi. Ularga diplom, "Yosh iqtidor
                       egalari uchun" kitoblari📚 va 400.000 so`mlik vaucherlar
                       beriladi.'
-                    >
-                      🥇Oltin medali bilan eng yuqori natijaga erishgan 5 ta
-                      o`quvchi taqdirlanadi. Ularga diplom, "Yosh iqtidor
-                      egalari uchun" kitoblari📚 va 400.000 so'mlik vaucherlar
-                      beriladi.
-                    </p>
-                  </div>
-                  <div class="news_card swiper-slide">
-                    <div class="news_card_img">
-                      <img src="image/thoughts/Lobar Sobirova.png" alt="" />
+                      >
+                        🥇Oltin medali bilan eng yuqori natijaga erishgan 5 ta
+                        o`quvchi taqdirlanadi. Ularga diplom, "Yosh iqtidor
+                        egalari uchun" kitoblari📚 va 400.000 so'mlik vaucherlar
+                        beriladi.
+                      </p>
                     </div>
-                    <h5 class="news_card_title">
-                      "Qorako'l Ziyo" da 3-4-sinflar o'rtasida bepul olimpiada
-                      bo'lib o'tadi.
-                    </h5>
-                    <p
-                      class="news_card_text"
-                      title='🥇Oltin medali bilan eng yuqori natijaga erishgan 5 ta
+                  </li>
+                  <li class="card-item swiper-slide reveal reveal">
+                    <div class="news_card swiper-slide">
+                      <div class="news_card_img">
+                        <img src="image/thoughts/Lobar Sobirova.png" alt="" />
+                      </div>
+                      <h5 class="news_card_title">
+                        "Qorako'l Ziyo" da 3-4-sinflar o'rtasida bepul olimpiada
+                        bo'lib o'tadi.
+                      </h5>
+                      <p
+                        class="news_card_text"
+                        title='🥇Oltin medali bilan eng yuqori natijaga erishgan 5 ta
                       o`quvchi taqdirlanadi. Ularga diplom, "Yosh iqtidor
                       egalari uchun" kitoblari📚 va 400.000 so`mlik vaucherlar
                       beriladi.'
-                    >
-                      🥇Oltin medali bilan eng yuqori natijaga erishgan 5 ta
-                      o`quvchi taqdirlanadi. Ularga diplom, "Yosh iqtidor
-                      egalari uchun" kitoblari📚 va 400.000 so'mlik vaucherlar
-                      beriladi.
-                    </p>
-                  </div>
-                  <div class="news_card swiper-slide">
-                    <div class="news_card_img">
-                      <img src="image/thoughts/Lobar Sobirova.png" alt="" />
+                      >
+                        🥇Oltin medali bilan eng yuqori natijaga erishgan 5 ta
+                        o`quvchi taqdirlanadi. Ularga diplom, "Yosh iqtidor
+                        egalari uchun" kitoblari📚 va 400.000 so'mlik vaucherlar
+                        beriladi.
+                      </p>
                     </div>
-                    <h5 class="news_card_title">
-                      "Qorako'l Ziyo" da 3-4-sinflar o'rtasida bepul olimpiada
-                      bo'lib o'tadi.
-                    </h5>
-                    <p
-                      class="news_card_text"
-                      title='🥇Oltin medali bilan eng yuqori natijaga erishgan 5 ta
+                  </li>
+                  <li class="card-item swiper-slide reveal reveal">
+                    <div class="news_card swiper-slide">
+                      <div class="news_card_img">
+                        <img src="image/thoughts/Lobar Sobirova.png" alt="" />
+                      </div>
+                      <h5 class="news_card_title">
+                        "Qorako'l Ziyo" da 3-4-sinflar o'rtasida bepul olimpiada
+                        bo'lib o'tadi.
+                      </h5>
+                      <p
+                        class="news_card_text"
+                        title='🥇Oltin medali bilan eng yuqori natijaga erishgan 5 ta
                       o`quvchi taqdirlanadi. Ularga diplom, "Yosh iqtidor
                       egalari uchun" kitoblari📚 va 400.000 so`mlik vaucherlar
                       beriladi.'
-                    >
-                      🥇Oltin medali bilan eng yuqori natijaga erishgan 5 ta
-                      o`quvchi taqdirlanadi. Ularga diplom, "Yosh iqtidor
-                      egalari uchun" kitoblari📚 va 400.000 so'mlik vaucherlar
-                      beriladi.
-                    </p>
-                  </div>
-                  <div class="news_card swiper-slide">
-                    <div class="news_card_img">
-                      <img src="image/thoughts/Lobar Sobirova.png" alt="" />
+                      >
+                        🥇Oltin medali bilan eng yuqori natijaga erishgan 5 ta
+                        o`quvchi taqdirlanadi. Ularga diplom, "Yosh iqtidor
+                        egalari uchun" kitoblari📚 va 400.000 so'mlik vaucherlar
+                        beriladi.
+                      </p>
                     </div>
-                    <h5 class="news_card_title">
-                      "Qorako'l Ziyo" da 3-4-sinflar o'rtasida bepul olimpiada
-                      bo'lib o'tadi.
-                    </h5>
-                    <p
-                      class="news_card_text"
-                      title='🥇Oltin medali bilan eng yuqori natijaga erishgan 5 ta
+                  </li>
+                  <li class="card-item swiper-slide reveal reveal">
+                    <div class="news_card swiper-slide">
+                      <div class="news_card_img">
+                        <img src="image/thoughts/Lobar Sobirova.png" alt="" />
+                      </div>
+                      <h5 class="news_card_title">
+                        "Qorako'l Ziyo" da 3-4-sinflar o'rtasida bepul olimpiada
+                        bo'lib o'tadi.
+                      </h5>
+                      <p
+                        class="news_card_text"
+                        title='🥇Oltin medali bilan eng yuqori natijaga erishgan 5 ta
                       o`quvchi taqdirlanadi. Ularga diplom, "Yosh iqtidor
                       egalari uchun" kitoblari📚 va 400.000 so`mlik vaucherlar
                       beriladi.'
-                    >
-                      🥇Oltin medali bilan eng yuqori natijaga erishgan 5 ta
-                      o`quvchi taqdirlanadi. Ularga diplom, "Yosh iqtidor
-                      egalari uchun" kitoblari📚 va 400.000 so'mlik vaucherlar
-                      beriladi.
-                    </p>
-                  </div>
-                  <div class="news_card swiper-slide">
-                    <div class="news_card_img">
-                      <img src="image/thoughts/Lobar Sobirova.png" alt="" />
+                      >
+                        🥇Oltin medali bilan eng yuqori natijaga erishgan 5 ta
+                        o`quvchi taqdirlanadi. Ularga diplom, "Yosh iqtidor
+                        egalari uchun" kitoblari📚 va 400.000 so'mlik vaucherlar
+                        beriladi.
+                      </p>
                     </div>
-                    <h5 class="news_card_title">
-                      "Qorako'l Ziyo" da 3-4-sinflar o'rtasida bepul olimpiada
-                      bo'lib o'tadi.
-                    </h5>
-                    <p
-                      class="news_card_text"
-                      title='🥇Oltin medali bilan eng yuqori natijaga erishgan 5 ta
-                      o`quvchi taqdirlanadi. Ularga diplom, "Yosh iqtidor
-                      egalari uchun" kitoblari📚 va 400.000 so`mlik vaucherlar
-                      beriladi.'
-                    >
-                      🥇Oltin medali bilan eng yuqori natijaga erishgan 5 ta
-                      o`quvchi taqdirlanadi. Ularga diplom, "Yosh iqtidor
-                      egalari uchun" kitoblari📚 va 400.000 so'mlik vaucherlar
-                      beriladi.
-                    </p>
-                  </div>
-
-                  <div class="swiper-pagination"></div>
-                  <!-- Navigation Buttons -->
-                  <div class="swiper-slide-button swiper-button-prev"></div>
-                  <div class="swiper-slide-button swiper-button-next"></div>
-                </div>
+                  </li>
+                </ul>
               </div>
             </div>
           </div>
@@ -1287,13 +1360,13 @@
         <div class="footer_box">
           <div class="footer_top">
             <div class="footer_logo">
-              <img src="image/footer/Qorakol logo.svg" alt="" />
-              <p>
+              <img class="reveal" src="image/footer/Qorakol logo.svg" alt="" />
+              <p class="reveal">
                 Prezident va ixtisoslashtirilgan maktablariga tayyorlovchi
                 yetakchi o’quv markaz
               </p>
             </div>
-            <div class="site_map">
+            <div class="site_map reveal">
               <h4>Sayt xaritasi</h4>
               <ul>
                 <li><a href="#about_qorakol">Biz haqimizda</a></li>
@@ -1302,7 +1375,7 @@
                 <li><a href="#teachers">O’qituvchilarimiz</a></li>
               </ul>
             </div>
-            <div class="filiallar">
+            <div class="filiallar reveal">
               <h4>Filiallarimiz</h4>
               <ul>
                 <li><a href="">Shahriston filiali</a></li>
@@ -1310,7 +1383,7 @@
                 <li><a href="">Olmazor filiali</a></li>
               </ul>
             </div>
-            <div class="footer_contact">
+            <div class="footer_contact reveal">
               <h4>Kontaktlar</h4>
               <a href="tel:+ 998 99 996 44 00">+ 998 99 996 44 00</a>
               <div class="footer_tarmoqlar">
@@ -1323,7 +1396,7 @@
               </div>
             </div>
           </div>
-          <div class="footer_bottom">
+          <div class="footer_bottom reveal">
             <p>Designed by <span>Islom Raximqulov</span></p>
           </div>
         </div>

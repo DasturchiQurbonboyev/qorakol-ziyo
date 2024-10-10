@@ -3,7 +3,6 @@
     max-width: 813px;
     margin: 0 auto;
     text-align: center;
-    /* Matnni markazga joylashtiramiz */
 }
 
 .experience_title span {
@@ -22,28 +21,70 @@
     border: 1px solid #F75929;
     border-radius: 24px;
     padding: 20px;
-    width: 320px;
     background-color: white;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    /* Yengil soyalar qo‘shamiz */
 }
-
 .experience_card_img img {
-    width: 100%;
     border-radius: 16px;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 .experience_card_img {
+    width: 100%;
+    height: 320px;
     position: relative;
 }
 
-.experience_size {
+.experience_card_img_b_a{
+    position: relative;
+    height: 100%;
+}
+.experience_card_img_b_a::before,
+.experience_card_img_b_a::after {
     position: absolute;
-    bottom: 0;
+    background: transparent;
+    /* Fonni shaffof qildik */
+    content: "";
+    width: 30px;
+    height: 30px;
+    z-index: 20;
     right: 0;
+}
+
+.experience_card_img_b_a::after {
+    bottom: 31%;
+    right: -15px;
+    border-right: 15px solid #fff;
+    border-bottom: 7px solid #fff;
+    border-radius: 0 0 24px 0;
+}
+
+.experience_card_img_b_a::before {
+    right: 31%;
+    bottom: -20px;
+    border-radius: 15px;
+    border-right: 10px solid #fff;
+    border-bottom: 20px solid #fff;
+    border-radius: 0 0 36px 0;
+}
+
+
+
+.experience_size_border{
+    border-radius: 16px;
+    position: absolute;
+    background: #fff;
+    padding: 13px;
+    bottom: -12px;
+    right: -13px;
+    width: 40%;
+    height: 38%;
+}
+
+.experience_size {
     background: #F75929;
-    width: 30%;
-    height: 28%;
     border-radius: 16px;
     padding-top: 10px;
     color: white;
@@ -51,6 +92,9 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    height: 100%;
+    z-index: 45;
+    width: 100%;
 }
 
 .experience_size span {
@@ -89,167 +133,44 @@
     color: #2D487D;
 }
 
-/* Swiper specific styling */
-.swiper-button-prev,
-.swiper-button-next {
-    background-color: #F75929;
-    border-radius: 50%;
-    padding: 10px;
-    color: white;
-    width: 40px;
-    height: 40px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    display: none;
+.teacher_card-wrapper{
+    padding: 60px 0; 
 }
-
-.swiper-button-prev:hover,
-.swiper-button-next:hover {
-    background-color: #2D487D;
-}
-
-.swiper-pagination-bullet {
-    background-color: #F75929 !important;
-    opacity: 1;
-    display: none;
-}
-
-.swiper-pagination-bullet-active {
-    background-color: #2D487D !important;
-}
-
-.swiper-scrollbar {
-    background-color: #F75929;
-}
-
-
-
 /* ---------------------------- */
 
 
-
-.card-wrapper {
-    padding-left: 250px;
-}
-
-.card-list .card-item {
-    list-style: none;
-}
-
-.card-list .card-item .card-link {
-    display: block;
-    background: #fff;
-    /* padding: 18px; */
-    user-select: none;
-    border-radius: 12px;
-    text-decoration: none;
-    border: 2px solid transparent;
-    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.05);
-    transition: 0.2s ease;
-}
-
-.card-list .card-item .card-link:active {
-    cursor: grabbing;
-}
-
-.card-list .card-item .card-link:hover {
-    border-color: #5372F0;
-}
-
-.card-list .card-link .card-image {
-    width: 100%;
-    border-radius: 10px;
-    aspect-ratio: 16 / 9;
-    object-fit: cover;
-}
-
-.card-list .card-link .badge {
-    color: #5372F0;
-    width: fit-content;
-    padding: 8px 16px;
-    font-size: 0.95rem;
-    border-radius: 50px;
-    font-weight: 500;
-    background: #DDE4FF;
-    margin: 16px 0 18px;
-}
-
-.card-list .card-link .badge-designer {
-    color: #B22485;
-    background: #F7DFF5;
-}
-
-.card-list .card-link .badge-marketer {
-    color: #B25A2B;
-    background: #FFE3D2;
-}
-
-.card-list .card-link .badge-gamer {
-    color: #205C20;
-    background: #D6F8D6;
-}
-
-.card-list .card-link .badge-editor {
-    color: #856404;
-    background: #fff3cd;
-}
-
-.card-list .card-link .card-title {
-    color: #000;
-    font-size: 1.19rem;
-    font-weight: 600;
-}
-
-.card-list .card-link .card-button {
-    height: 35px;
-    width: 35px;
-    color: #5372F0;
-    margin: 30px 0 5px;
-    background: none;
-    cursor: pointer;
-    border-radius: 50%;
-    border: 2px solid #5372F0;
-    transform: rotate(-45deg);
-    transition: 0.4s ease;
-}
-
-.card-list .card-link:hover .card-button {
-    color: #fff;
-    background: #5372F0;
-}
-
-.card-wrapper .swiper-pagination-bullet {
-    height: 13px;
-    width: 13px;
-    opacity: 0.5;
-    background: #5372F0;
-}
-
-.card-wrapper .swiper-pagination-bullet-active {
-    opacity: 1;
-}
-
-.card-wrapper .swiper-slide-button {
-    color: #5372F0;
-    margin-top: -35px;
-}
-
-@media (max-width:1250px) {
-    .experience_size span{
+@media (max-width:1270px) {
+    .experience_size span {
         font-size: 14px;
     }
-    .experience_size p{
+
+    .experience_size p {
         font-size: 22px;
         line-height: 30px;
     }
 }
-
-
 @media (max-width:1024px) {
-    .experience_size p{
+    .experience_size p {
         line-height: 35px;
     }
+}
+
+@media (max-width:970px) {
+    .experience_card_img_b_a::before {
+        right: 30%;
+    }
+}
+
+@media (max-width:860px) {
+    .experience_card_img_b_a::before {
+            right: 32%;
+        }
+}
+
+@media (max-width:700px) {
+    .experience_card_img_b_a::before {
+            right: 29%;
+        }
 }
 
 @media (max-width: 768px) {
@@ -257,55 +178,80 @@
         margin: 0 10px 25px;
     }
 
-    .card-wrapper .swiper-slide-button {
+    /* .card-wrapper .swiper-slide-button {
         display: none;
+    } */
+}
+
+@media (max-width:630px) {
+    .experience_card{
+        width: 80%;
+        margin: 0 auto !important;
+    }
+
+    .experience_card_img_b_a::before {
+        right: 33.5%;
     }
 }
 
 
 @media (max-width:576px) {
+    
     .experience_card{
-        padding: 10px;
+        width: 100%;
+        margin: 0 !important;
+    }
+    .experience_card_img_b_a::before {
+        right: 34%;
     }
 
-   .experience_teacher_name {
-       font-size: 20px;
-       line-height: 30px;
-       margin-bottom: 0;
-       margin-top: 5px;
-   }
+    .experience_teacher_name {
+        font-size: 20px;
+        line-height: 30px;
+        margin-bottom: 0;
+        margin-top: 5px;
+    }
 
-   .experience_teacher_science{
+    .experience_teacher_science {
         font-size: 14px;
         font-weight: 400;
         line-height: 20px;
-   }
+    }
 
-   .experience_size span{
+    .experience_size span {
         font-size: 12px;
-   }
+    }
 
-   .experience_size p{
-    font-size: 15px;
-    line-height: 24px;
-   }
+    .experience_size p {
+        font-size: 15px;
+        line-height: 24px;
+    }
 
-   .experience_card{
-    margin-right: 0;
-    gap: 10px;
-   }
-   .experience_card{
-    margin-right: 0!important;
-   }
+    .experience_card {
+        margin-right: 0;
+        gap: 10px;
+    }
 
-   .experience .card-wrapper{
-    padding-left:100px;
-   }
+    .experience_card {
+        margin-right: 0 !important;
+    }
+}
+
+
+@media (max-width:470px) {
+    .experience_card_img_b_a::before {
+        right: 33%;
+    }
+}
+
+@media (max-width:400px) {
+    .experience_card_img_b_a::before {
+        right: 31%;
+    }
 }
 
 @media (max-width:380px) {
     .experience .card-wrapper {
-            padding-left: 50px;
-        }
+        padding-left: 50px;
+    }
 }
-

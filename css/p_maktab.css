@@ -103,27 +103,24 @@
 
 
 
-@media (max-width:1175px) {
-    .p_maktab_box{
+@media (max-width:1215px) {
+    .p_maktab_box {
         gap: 20px;
     }
 
-    .p_maktab_card_text p{
-        font-size :20px ;
+    .p_maktab_card_text p {
+        font-size: 20px;
     }
 
 }
 
 @media (max-width:1060px) {
-    .p_maktab_box{
-        /* display: flex; */
-        /* flex-wrap: wrap; */
-        /* justify-content: center; */
-    grid-template-columns: repeat(2, 1fr);
-    justify-content: center;
+    .p_maktab_box {
+        grid-template-columns: repeat(2, 1fr);
+        justify-content: center;
     }
 
-    .p_maktab_card{
+    .p_maktab_card {
         width: 360px;
     }
 }
@@ -136,7 +133,7 @@
         line-height: 40px;
     }
 
-    .p_maktab_text{
+    .p_maktab_text {
         font-size: 18px;
         line-height: 30px;
     }
@@ -151,12 +148,12 @@
         height: 160px;
     }
 
-    .p_maktab_card_text p{
+    .p_maktab_card_text p {
         font-size: 18px;
         line-height: 25px;
     }
 
-    .p_maktab_btn{
+    .p_maktab_btn {
         font-size: 18px;
         padding: 18px 10px;
         width: 100%;
@@ -165,11 +162,11 @@
 }
 
 @media (max-width:700px) {
-    
+
     .p_maktab_title {
-            font-size: 30px;
-            line-height: 40px;
-        }
+        font-size: 30px;
+        line-height: 40px;
+    }
 
     .p_maktab_box {
         grid-template-columns: none;
@@ -185,7 +182,7 @@
         font-size: 18px;
         line-height: 25px;
     }
-    
+
     .p_maktab_btn {
         font-size: 16px;
         padding: 15px 10px;
