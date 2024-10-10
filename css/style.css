@@ -221,7 +221,7 @@
     left: 40px;
     background: rgb(160, 153, 153);
     border: none;
-    width: 30%;
+    width: 25%;
     padding: 19px;
     border-radius: 14px;
     color: white;
@@ -247,7 +247,7 @@
 
 .nav_modall_register{
     position: absolute;
-    width: 60%;
+    width: 50%;
     height: 60%;
     background: white;
     border-radius: 25px;
@@ -279,30 +279,45 @@
 .reveal {
     opacity: 0;
     transform: translateY(50px);
-    /* Pastdan yuqoriga ko'tariladi */
     transition: all 0.8s ease;
-    /* Animatsiya davomiyligi va effekti */
 }
 
-.reveal.active {
+.active {
     opacity: 1;
     transform: translateY(0);
-    /* O'z joyiga qaytadi */
 }
 
 
 @media (max-width:1215px) {
+
+    .nav_modall_register {
+            width: 70%;
+            height: 50%;
+        }
+
     .nav__list {
         gap: 18px;
     }
-
+    
     .nav__logo {
 
         gap: 10px;
     }
-
+    
     .nav__text {
         max-width: 130px;
+    }
+}
+
+@media (max-width:1180px) {
+    .close_nav_modall{
+        font-size: 20px;
+        padding: 20px;
+    }
+
+    .enroll_box_btn{
+        padding: 20px;
+        line-height: 20px;
     }
 }
 
@@ -316,7 +331,6 @@
     }
 }
 
-@media (max-width:1080px) {}
 
 @media (max-width:990px) {
 
@@ -369,7 +383,32 @@
     }
 }
 
+@media (max-width:850px) {
+    .nav_modall .nav_modal_inp_name{
+        padding: 20px;
+    }
+    
+    .nav_modall_register {
+        width: 90%;
+        height: 50%;
+    }
+    .nav_modall_register .nav_modal_inp_name,
+    .nav_modall_register div{
+        width: 90%;
+    }
+
+}
+
 @media (max-width:620px) {
+
+    .close_nav_modall{
+        width: 120px;
+    }
+
+    .nav_modall_register .nav_modal_inp_name,
+        .nav_modall_register div{
+            width: 100%;
+        }
 
     .nav__list {
         top: 85px;
@@ -418,4 +457,22 @@
         opacity: 0;
     }
 
+}
+
+@media (max-width:450px) {
+    .close_nav_modall{
+        font-size: 16px;
+        height: 55px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .enroll_box_btn{
+        padding: 19px;
+        line-height: 15px;
+        height: 55px;
+        display: flex;
+            justify-content: center;
+            align-items: center;
+    }
 }

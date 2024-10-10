@@ -180,7 +180,7 @@ function checkElements() {
     const windowHeight = window.innerHeight;
 
     // Agar element ko'rinish zonasida bo'lsa, 'active' klassini qo'shish
-    if (elementTop < windowHeight - 100) {
+    if (elementTop < windowHeight - 30) {
       element.classList.add('active');
     } else {
       element.classList.remove('active'); // Sahifaga qaytganda 'active' klassini olib tashlash
