@@ -40,8 +40,40 @@
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
+    transition: .3s;
 }
 
+.p_maktab_card:hover{
+    background-image: url(../image/p_maktab/Subtract.svg);
+}
+
+.p_maktab_card:hover .p_maktab_card_text p, .p_maktab_card:hover .p_maktab_card_num{
+    color: white;
+}
+
+.p_maktab_card:hover .p_maktab_card_icon1{
+    content: url(../image/p_maktab/talim.svg);
+}
+
+.p_maktab_card:hover .p_maktab_card_icon2 {
+    content: url(../image/p_maktab/talim.svg);
+}
+
+.p_maktab_card:hover .p_maktab_card_icon3 {
+    content: url(../image/p_maktab/kutbxona.svg);
+}
+
+.p_maktab_card:hover .p_maktab_card_icon4 {
+    content: url(../image/p_maktab/university.svg);
+}
+
+.p_maktab_card:hover .p_maktab_card_icon5 {
+    content: url(../image/p_maktab/kurslar.svg);
+}
+
+.p_maktab_card:hover .p_maktab_card_icon6 {
+    content: url(../image/p_maktab/yotoqxona.svg);
+}
 
 
 .p_maktab_card_text {
