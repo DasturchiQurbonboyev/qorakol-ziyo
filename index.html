@@ -525,6 +525,21 @@
                 <div class="partners_card reveal">
                   <img src="image/partners/Google_2015_logo.svg.webp" alt="" />
                 </div>
+                <div class="partners_card reveal">
+                  <img src="image/partners/Behance-Logo.png" alt="" />
+                </div>
+                <div class="partners_card reveal">
+                  <img
+                    src="https://www.cdnlogo.com/logos/c/41/craft.svg"
+                    alt=""
+                  />
+                </div>
+                <div class="partners_card reveal">
+                  <img src="image/partners/Dribbble-Logo.png" alt="" />
+                </div>
+                <div class="partners_card reveal">
+                  <img src="image/partners/Google_2015_logo.svg.webp" alt="" />
+                </div>
               </div>
             </div>
           </div>
@@ -1139,12 +1154,13 @@
                   src="image/enroll/uzbekistan.svg"
                   alt=""
                 />
-                <label style="color: black" for="">+998</label>
+                <label style="color: black" for="phoneInput">+998</label>
                 <input
-                  type="tel"
-                  onkeydown="phoneNumberFormatter()"
+                  type="text"
                   id="phoneInput"
-                  placeholder="(__)___-__-__"
+                  placeholder="(__) ___-__-__"
+                  oninput="maskPhoneInput(this)"
+                  maxlength="14"
                 />
               </div>
               <button class="enroll_box_btn reveal">
@@ -1407,6 +1423,7 @@
     <script src="js/modal.js"></script>
     <script src="js/index.js"></script>
     <script src="js/experiens.js"></script>
+    <script src="js/partners.js"></script>
     <script src="js/news.js"></script>
     <script src="js/thoughts.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/inputmask/5.0.7/inputmask.min.js"></script>

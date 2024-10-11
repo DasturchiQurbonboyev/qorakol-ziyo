@@ -1,17 +1,26 @@
+.partners_title{
+    padding-bottom: 60px;
+}
+
 .partners_box {
     max-width: 1280px;
     overflow: hidden;
     padding: 10px 0;
 }
 
+.marquee {
+    display: flex;
+    white-space: nowrap;
+    overflow: hidden;
+    box-sizing: border-box;
+    width: calc(300px * 8);
+    animation: none;
+}
+
 .partners {
     display: flex;
     gap: 24px;
     align-items: center;
-}
-
-.partners_title {
-    margin-bottom: 60px;
 }
 
 .partners_card {
@@ -26,36 +35,8 @@
     border: 1px solid #F75929;
 }
 
-
-
 .partners_card img {
     width: 100%;
-}
-
-.marquee {
-    display: inline-block;
-    white-space: nowrap;
-    overflow: hidden;
-    box-sizing: border-box;
-    animation: marquee 20s linear infinite;
-}
-
-@keyframes marquee {
-    0% {
-        transform: translateX(0);
-    }
-
-    50% {
-        transform: translateX(-100%);
-    }
-
-    50.01% {
-        transform: translateX(100%);
-    }
-
-    100% {
-        transform: translateX(0%);
-    }
 }
 
 @media (max-width:1024px) {

@@ -17,57 +17,44 @@ buttons.forEach((button, index) => {
 // --------- enroool  inputs------//
 
 
-function formatPhoneNumber(value) {
-    if (!value) return value;
 
-    const phoneNumber = value.replace(/[^\d]/g, '');
-    const phoneNumberLength = phoneNumber.length;
+function maskPhoneInput(input) {
+    let value = input.value.replace(/\D/g, '');  
 
-    if (phoneNumberLength < 3) return phoneNumber;
-
-
-    let formattedNumber = `(${phoneNumber.slice(0, 2)}) `;
-    if (phoneNumberLength > 2) {
-        formattedNumber += phoneNumber.slice(2, 5);
+    if (value.length > 2) {
+        value = '(' + value.slice(0, 2) + ') ' + value.slice(2);  
     }
-    if (phoneNumberLength > 5) {
-        formattedNumber += ` - ${phoneNumber.slice(5, 7)}`;
+    if (value.length > 8) {
+        value = value.slice(0, 8) + '-' + value.slice(8);  
     }
-    if (phoneNumberLength > 7) {
-        formattedNumber += ` - ${phoneNumber.slice(7, 9)}`;
+    if (value.length > 11) {
+        value = value.slice(0, 11) + '-' + value.slice(11);  
     }
 
-    return formattedNumber;
+    input.value = value;  
 }
 
-function phoneNumberFormatter() {
-    const inputField = document.getElementById('phoneInput');
-    const formattedInputValue = formatPhoneNumber(inputField.value);
-    inputField.value = formattedInputValue;
-}
 
-document.getElementById('phoneInput').addEventListener('input', phoneNumberFormatter);
+document.getElementById('phoneInput').value = '(__) ';
 
 
+// ----------------------------------------//
 
 new Swiper('.news_card-wrapper', {
     loop: true,
     spaceBetween: 30,
 
-    // Pagination bullets
     pagination: {
         el: '.swiper-pagination',
         clickable: true,
         dynamicBullets: true
     },
 
-    // Navigation arrows
     navigation: {
         nextEl: '.swiper-button-next',
         prevEl: '.swiper-button-prev',
     },
 
-    // Responsive breakpoints
     breakpoints: {
         0: {
             slidesPerView: 1
