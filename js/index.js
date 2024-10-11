@@ -139,13 +139,25 @@ showQuestion();
 
 
 
-const navToggle = document.querySelector(".nav_toggle")
-const navList = document.querySelector(".nav__list")
-navToggle.onclick = function () {
-    navToggle.classList.toggle("active_toggle")
-    navList.classList.toggle("active_nav_list")
+document.addEventListener("DOMContentLoaded", function () {
+    const navToggle = document.querySelector(".nav_toggle");
+    const navList = document.querySelector(".nav__list");
+    const navListLinks = document.querySelectorAll(".active_nav_list_link");
 
-}
+    navToggle.onclick = function () {
+        navToggle.classList.toggle("active_toggle");
+        navList.classList.toggle("active_nav_list");
+    };
+
+    navListLinks.forEach(link => {
+        link.onclick = function () {
+            navList.classList.remove("active_nav_list");
+            navToggle.classList.remove("active_toggle");
+        };
+    });
+});
+
+
 
 
 //--------- NAVBAR TOGGLE END---------------//
