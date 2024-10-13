@@ -398,6 +398,11 @@
         width: 90%;
     }
 
+    .nav_modall_register{
+    height: 350px;
+    transform: translate(-50%, -60%);
+}
+
 }
 
 @media (max-width:620px) {

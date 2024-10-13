@@ -166,24 +166,21 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 // -------------------- NAVBAR MODALL START ----------------//
-// DOM elementlarini tanlang
+
 const navBtns = document.querySelectorAll(".nav_btn_modall");
 const navModall = document.querySelector(".nav_modall");
 const closeNavModall = document.querySelector(".close_nav_modall");
 
-// Har bir nav_btn_modall elementiga hodisa qo'shish
 navBtns.forEach((navBtn) => {
     navBtn.onclick = function () {
         navModall.classList.add("active_nav_modal");
     };
 });
 
-// Yopish tugmasiga hodisa qo'shish
 closeNavModall.onclick = function () {
     navModall.classList.remove("active_nav_modal");
 };
 
-// Modal ochilganda sahna orqa fonini qoplash uchun oddiy CSS qo'shish
 document.addEventListener('click', (event) => {
     if (event.target === navModall) {
         navModall.classList.remove("active_nav_modal");
@@ -193,7 +190,6 @@ document.addEventListener('click', (event) => {
 
 // -------------------- NAVBAR MODALL EMD ----------------//
 
-// Elementlarni tekshirish funksiyasi
 function checkElements() {
     const elements = document.querySelectorAll('.reveal');
 
@@ -201,17 +197,14 @@ function checkElements() {
         const elementTop = element.getBoundingClientRect().top;
         const windowHeight = window.innerHeight;
 
-        // Agar element ko'rinish zonasida bo'lsa, 'active' klassini qo'shish
         if (elementTop < windowHeight - 30) {
             element.classList.add('active');
         } else {
-            element.classList.remove('active'); // Sahifaga qaytganda 'active' klassini olib tashlash
+            element.classList.remove('active');
         }
     });
 }
 
-// Sahifa yuklanganda elementlarni tekshirish
 window.addEventListener('DOMContentLoaded', checkElements);
 
-// Sahifani skroll qilganda elementlarni yana tekshirish
 window.addEventListener('scroll', checkElements);

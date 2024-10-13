@@ -19,23 +19,23 @@ buttons.forEach((button, index) => {
 
 
 function maskPhoneInput(input) {
-    let value = input.value.replace(/\D/g, '');  
+    let value = input.value.replace(/\D/g, '');
 
     if (value.length > 2) {
-        value = '(' + value.slice(0, 2) + ') ' + value.slice(2);  
+        value = '(' + value.slice(0, 2) + ') ' + value.slice(2);
     }
     if (value.length > 8) {
-        value = value.slice(0, 8) + '-' + value.slice(8);  
+        value = value.slice(0, 8) + '-' + value.slice(8);
     }
     if (value.length > 11) {
-        value = value.slice(0, 11) + '-' + value.slice(11);  
+        value = value.slice(0, 11) + '-' + value.slice(11);
     }
 
-    input.value = value;  
+    input.value = value;
 }
 
 
-document.getElementById('phoneInput').value = '(__) ';
+document.getElementById('phoneInput');
 
 
 // ----------------------------------------//
