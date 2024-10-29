@@ -114,7 +114,10 @@ document.querySelector(".nextBtn").addEventListener("click", function () {
             currentQuestionIndex++;
             showQuestion();
         }
+
     }
+    currentQuestionIndex++;
+    showQuestion();
 });
 
 document.querySelector(".backBtn").addEventListener("click", function () {
