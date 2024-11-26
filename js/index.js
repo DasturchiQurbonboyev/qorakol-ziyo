@@ -76,6 +76,8 @@ const questions = [
 
 let currentQuestionIndex = 0;
 
+
+
 function showQuestion() {
     const quizQuestion = document.getElementById("quizQuestion");
     const stepCounter = document.getElementById("stepCounter");
@@ -84,13 +86,14 @@ function showQuestion() {
         const questionData = questions[currentQuestionIndex];
 
         if (questionData.options) {
-            const options = questionData.options.map(
-                (option, index) => `
+            const options = questionData.options.map((option, index) => {
+                const isChecked = questionData.selectedAnswer === option ? "checked" : "";
+                return `
                 <div class='answers_row'>
-                    <input type="radio" id="option${index}" name="quizOption" value="${option}" required />
+                    <input type="radio" id="option${index}" name="quizOption" value="${option}" ${isChecked} />
                     <label for="option${index}">${option}</label>
-                </div>`
-            ).join('');
+                </div>`;
+            }).join('');
             quizQuestion.innerHTML = `
                 <p>${questionData.question}</p>
                 ${options}
@@ -106,18 +109,27 @@ function showQuestion() {
     }
 }
 
+
+
+
+
+
 document.querySelector(".nextBtn").addEventListener("click", function () {
     const selectedOption = document.querySelector('input[name="quizOption"]:checked');
+
     if (currentQuestionIndex < 10 && !selectedOption) {
         alert("Iltimos, javobni tanlang!");
-        if (currentQuestionIndex < questions.length) {
-            currentQuestionIndex++;
-            showQuestion();
-        }
-
+        return;
     }
-    currentQuestionIndex++;
-    showQuestion();
+
+    if (selectedOption) {
+        questions[currentQuestionIndex].selectedAnswer = selectedOption.value;
+    }
+
+    if (currentQuestionIndex < questions.length - 1) {
+        currentQuestionIndex++;
+        showQuestion();
+    }
 });
 
 document.querySelector(".backBtn").addEventListener("click", function () {
@@ -128,6 +140,7 @@ document.querySelector(".backBtn").addEventListener("click", function () {
 });
 
 showQuestion();
+
 
 
 

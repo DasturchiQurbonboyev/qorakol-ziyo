@@ -59,7 +59,7 @@
     text-align: left;
     border: none;
     background: #2D487D;
-    opacity: 0.5;
+    /* opacity: 0.5; */
     color: white;
     cursor: pointer;
 }
