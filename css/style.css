@@ -87,6 +87,7 @@
 .navbar__contact_list,
 .nav__btn_list {
     display: none;
+    
 }
 
 .nav__contact {
@@ -125,7 +126,9 @@
     outline: none;
     border-radius: 50px;
     cursor: pointer;
-    transition: .3s;
+    transition: 0.3s;
+    text-decoration: none;
+    display: inline-block;
 }
 
 .btn:hover {
@@ -143,6 +146,7 @@
     line-height: 18px;
     text-align: left;
     padding: 12px 21px;
+    display: inline-block;
 }
 
 .nav_toggle {
@@ -215,35 +219,6 @@
 }
 
 
-.close_nav_modall{
-    position: absolute;
-    bottom: 40px;
-    left: 40px;
-    background: rgb(160, 153, 153);
-    border: none;
-    width: 25%;
-    padding: 19px;
-    border-radius: 14px;
-    color: white;
-    font-weight: 600;
-    font-size: 24px;
-    cursor: pointer;
-    transition: .3s;
-}
-
-.close_nav_modall:hover{
-    background: #b9b3b3;
-}
-
-.close_nav_modall:active{
-    transform: scale(0.9);
-}
-
-.close_nav_modall img{
-    transform: rotate(45deg);
-    z-index: 200;
-}
-
 
 .nav_modall_register{
     position: absolute;
@@ -310,10 +285,7 @@
 }
 
 @media (max-width:1180px) {
-    .close_nav_modall{
-        font-size: 20px;
-        padding: 20px;
-    }
+
 
     .enroll_box_btn{
         padding: 20px;
@@ -407,10 +379,6 @@
 
 @media (max-width:620px) {
 
-    .close_nav_modall{
-        width: 120px;
-    }
-
     .nav_modall_register .nav_modal_inp_name,
         .nav_modall_register div{
             width: 100%;
@@ -466,13 +434,7 @@
 }
 
 @media (max-width:450px) {
-    .close_nav_modall{
-        font-size: 16px;
-        height: 55px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
+
     .enroll_box_btn{
         padding: 19px;
         line-height: 15px;

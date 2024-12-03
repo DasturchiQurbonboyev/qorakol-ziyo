@@ -86,9 +86,9 @@
             </div>
           </li>
           <li class="nav__btn_list reveal">
-            <button class="nav__btn btn nav_btn_modall">
-              Bepul konsultatsiya
-            </button>
+            <a id="nav__btn" href="#enroll">
+              <button class="nav__btn btn">Bepul konsultatsiya</button>
+            </a>
           </li>
         </ul>
         <div class="navbar__contact">
@@ -96,42 +96,14 @@
             <a href="tel:+99899999964400">+998 99 99 996 44 00</a>
             <span>Biz bilan bog‘laning</span>
           </div>
-          <button class="nav__btn btn nav_btn_modall reveal">
-            Bepul konsultatsiya
-          </button>
+          <a href="#enroll">
+            <button class="nav__btn btn reveal">Bepul konsultatsiya</button>
+          </a>
         </div>
         <div class="nav_toggle reveal">
           <span class="common top_line"></span>
           <span class="common middle_line"></span>
           <span class="common bottom_line"></span>
-        </div>
-        <div class="nav_modall">
-          <div class="nav_modall_register">
-            <input
-              class="enroll_box_name nav_modal_inp_name"
-              type="text"
-              name=""
-              id=""
-              placeholder="Ismingizni kiriting"
-            />
-            <div class="enroll_box_phon phone-input reveal">
-              <img
-                class="phone-flag"
-                src="image/enroll/uzbekistan.svg"
-                alt=""
-              />
-              <label style="color: black" for="phoneInput">+998</label>
-              <input
-                type="text"
-                id="phoneInput"
-                placeholder="(__) ___-__-__"
-                oninput="maskPhoneInput(this)"
-                maxlength="14"
-              />
-            </div>
-            <button class="close_nav_modall">Yopish</button>
-            <button class="enroll_box_btn">Jo'natish</button>
-          </div>
         </div>
       </nav>
     </header>
@@ -1532,27 +1504,68 @@
         if (currentQuestionIndex < questions.length) {
           const questionData = questions[currentQuestionIndex];
 
-          if (questionData.options) {
+          if (questionData.inputType === "tel") {
+            // Telefon raqami savoli
+            quizQuestion.innerHTML = `
+        <p style="margin-bottom:15px">${questionData.question}</p>
+        <div style="border:none; background-color:#f7f2f2" class="enroll_box_phon phone-input ">
+          <img
+            class="phone-flag"
+            src="image/enroll/uzbekistan.svg"
+            alt="Uzbekistan Flag"
+          />
+          <label style="color: black" for="phoneInput">+998</label>
+          <input
+          style="padding:25px 0"
+            type="text"
+            class="res_input"
+            id="phoneInput"
+            placeholder="(__) ___-__-__"
+            oninput="maskPhoneInput(this)"
+            maxlength="14"
+          />
+        </div>
+      `;
+          } else if (
+            questionData.options &&
+            questionData.inputType !== "select"
+          ) {
+            // Radio button uchun
             const options = questionData.options
               .map((option, index) => {
                 const isChecked =
                   questionData.selectedAnswer === option ? "checked" : "";
                 return `
-                <div class='answers_row'>
-                    <input type="radio" id="option${index}" name="quizOption" value="${option}" ${isChecked} />
-                    <label for="option${index}">${option}</label>
-                </div>`;
+          <div class='answers_row'>
+              <input type="radio" id="option${index}" name="quizOption" value="${option}" ${isChecked} />
+              <label for="option${index}">${option}</label>
+          </div>`;
               })
               .join("");
             quizQuestion.innerHTML = `
-                <p>${questionData.question}</p>
-                ${options}
-            `;
-          } else {
+          <p style="margin-bottom:15px">${questionData.question}</p>
+          ${options}
+      `;
+          } else if (questionData.inputType === "select") {
+            // Select element uchun
+            const selectOptions = questionData.options
+              .map((option) => `<option value="${option}">${option}</option>`)
+              .join("");
             quizQuestion.innerHTML = `
-                <input class='res_input' id="phoneInput"  type="${questionData.inputType}" placeholder="${questionData.placeholder}" required />
-            `;
+          <p style="margin-bottom:15px">${questionData.question}</p>
+          <select class="res_input" id="selectInput">
+            <option value="" disabled selected>Iltimos, tanlang</option>
+            ${selectOptions}
+          </select>
+      `;
+          } else {
+            // Input field uchun
+            quizQuestion.innerHTML = `
+          <p style="margin-bottom:15px">${questionData.question}</p>
+          <input class='res_input' id="inputField" type="${questionData.inputType}" placeholder="${questionData.placeholder}" required />
+      `;
           }
+
           stepCounter.textContent = `${currentQuestionIndex + 1}/${
             questions.length
           }`;
@@ -1562,21 +1575,28 @@
         }
       }
 
+      // Next button funksiyasini yangilash
       document.querySelector(".nextBtn").addEventListener("click", function () {
         const selectedOption = document.querySelector(
           'input[name="quizOption"]:checked'
         );
+        const selectField = document.querySelector("#selectInput");
+        const inputField = document.querySelector("#inputField");
         const currentQuestion = questions[currentQuestionIndex];
-        const inputField = document.querySelector(".res_input");
 
-        if (currentQuestionIndex < 10 && !selectedOption) {
+        // Javob tanlanmagan yoki input bo'sh bo'lsa, xabar chiqadi
+        if (
+          currentQuestion.options &&
+          currentQuestion.inputType !== "select" &&
+          !selectedOption
+        ) {
           alert("Iltimos, javobni tanlang!");
           return;
-        }
-
-        // 1. Javob tanlanmagan bo'lsa yoki input bo'sh bo'lsa, xabar chiqadi
-        if (currentQuestion.options && !selectedOption) {
-          alert("Iltimos, javobni tanlang!");
+        } else if (
+          currentQuestion.inputType === "select" &&
+          (!selectField || !selectField.value)
+        ) {
+          alert("Iltimos, viloyatni tanlang!");
           return;
         } else if (
           !currentQuestion.options &&
@@ -1587,33 +1607,30 @@
           return;
         }
 
-        // 2. Javob yoki qiymatni saqlash
-
-        if (currentQuestion.options && selectedOption) {
+        // Javob yoki qiymatni saqlash
+        if (
+          currentQuestion.options &&
+          currentQuestion.inputType !== "select" &&
+          selectedOption
+        ) {
           currentQuestion.selectedAnswer = selectedOption.value;
+        } else if (currentQuestion.inputType === "select" && selectField) {
+          currentQuestion.answer = selectField.value;
         } else if (!currentQuestion.options && inputField) {
-          currentQuestion.answer = inputField.value.trim(); // Input maydoni qiymatini saqlash
-        }
-
-        if (selectedOption) {
-          questions[currentQuestionIndex].selectedAnswer = selectedOption.value;
+          currentQuestion.answer = inputField.value.trim();
         }
 
         if (currentQuestionIndex < questions.length - 1) {
           currentQuestionIndex++;
           showQuestion();
-        }
-
-        // 3. Keyingi savolga o'tish yoki yakuniy xabarni ko'rsatish
-        if (currentQuestionIndex < questions.length - 1) {
-          showQuestion();
         } else {
-          // Hamma savollarga javob berilganidan so'ng yakuniy xabarni ko'rsatish
+          // Test tugadi
           document.getElementById("quizQuestion").innerHTML = `
-            <p>Tabriklaymiz! Siz testni muvaffaqiyatli yakunladingiz.</p>
-        `;
+      <p>Tabriklaymiz! Siz testni muvaffaqiyatli yakunladingiz.</p>
+    `;
           document.querySelector(".nextBtn").style.display = "none";
           document.querySelector(".backBtn").style.display = "none";
+          document.getElementById("stepCounter").style.display = "none";
         }
       });
 
